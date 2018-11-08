@@ -1,0 +1,15 @@
+<h3> To add new equipment to the inventory, please create an equipment report. </h3>
+
+<%= form_for @equipment do |f_equipment| %>
+
+    <%= f_equipment.label :equipment_name %>
+    <%= f_equipment.text_field :name %>
+
+    <%= f_equipment.fields_for :reports do |f_report| %>
+        <%= f_report.label :report %>
+        <%= f_report.text_area :content %>
+    <% end %>
+
+    <%= f_equipment.submit "Submit Equipment and Report" %>
+
+<% end %>

@@ -1,0 +1,13 @@
+<h3> Reports for <%= @equipment.name %> </h3>
+<%= link_to "Create New Report", new_equipment_report_path(@equipment) %>
+<br>
+<%= link_to "Back to Dashboard", user_path(current_user) %>
+<ul> <% @reports.each do |report| %>
+    <fieldset>
+    <legend> <%= report.created_at %> </legend>
+    <p>
+     <%= report.content %>
+    </p>
+</fieldset>
+    <% end %>
+</ul>

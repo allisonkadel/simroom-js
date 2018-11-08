@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  date: 2018-08-06
+  simroom: MyString
+  user_id: 1
+  equipment_id: 1
+
+two:
+  name: MyString
+  description: MyText
+  date: 2018-08-06
+  simroom: MyString
+  user_id: 1
+  equipment_id: 1

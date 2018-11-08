@@ -1,0 +1,16 @@
+<h3> Equipment </h3>
+
+<%= link_to "Add New Equipment", new_equipment_path %>
+
+<% @equipment_index.each do |equipment| %>
+
+    <fieldset>
+    <p>
+    <legend> <%= equipment.name %> </legend>
+    </p>
+    <p>
+    <%= link_to "#{equipment.reports.count} Reports", equipment_reports_path(equipment) %>
+    </p>
+    </fieldset>
+
+<% end %>

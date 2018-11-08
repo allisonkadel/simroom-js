@@ -1,0 +1,16 @@
+<h3> Create a Training </h3>
+
+<%= form_for @training do |f| %> 
+    <p>
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+    </p>
+
+    <%= render :partial => "form_attributes", :locals => {:f => f} %>
+
+    <%= f.hidden_field(:user_id, :value => current_user.id) %>
+
+    <%= f.submit "Schedule Training" %>
+<% end %>
+
+    

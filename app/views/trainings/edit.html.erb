@@ -1,0 +1,14 @@
+<h3> Edit Training </h3>
+
+<fieldset>
+<legend> <%= @training.name %> </legend>
+<%= form_for @training do |f| %>
+
+    <%= render :partial => "form_attributes", :locals => {:f => f} %>
+
+    <p>
+        <%= "Created by: #{@training.user.email}" %>
+    </p>
+    <%= f.submit "Update Training" %>
+<% end %>
+</fieldset>

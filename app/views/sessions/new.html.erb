@@ -1,0 +1,11 @@
+<h3> Log In to Your Account </h3>
+
+<%= form_for @user, :url => url_for(:controller => 'sessions', :action => 'create') do |f| %>
+    <%=f.label :email %>
+    <%= f.text_field :email %>
+
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+
+    <%= f.submit "Log In" %>
+<% end %>

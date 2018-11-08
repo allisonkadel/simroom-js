@@ -1,0 +1,11 @@
+<fieldset>
+<legend> <%= @training.name %> </legend>
+
+<%= render :partial => "attributes", :locals => {:training => @training} %>
+
+</fieldset>
+
+<%= admin_edit_button %>
+<%= admin_cancel_button %>
+
+<%= link_to "Back to Trainings", trainings_path %>

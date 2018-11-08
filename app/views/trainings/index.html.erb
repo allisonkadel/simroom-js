@@ -1,0 +1,6 @@
+<h3> Currently Scheduled and Past Trainings </h3>
+<%= link_to "See Only Upcoming Trainings", '/trainings/upcoming' %><br>
+<%= link_to "See Only Past Trainings", '/trainings/past' %><br>
+<%= link_to "Create New Training", new_training_path(@training) %><br>
+
+<%= render :partial => "list", :locals => {:trainings => @trainings} %>
