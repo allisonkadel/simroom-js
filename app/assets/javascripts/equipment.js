@@ -1,14 +1,32 @@
 $(function() {
     $("a.load_reports").on('click',function(e) {
         e.preventDefault();
-        $.ajax({
-            method: 'GET',
-            url: this.href,
-        }).done(function(response) {
-            $("div.reports").html(response)
-        }).error(function(response) {
-            alert("something went wrong :(");
-        });
+
+        // LOW LEVEL AJAX METHOD
+
+        // $.ajax({
+        //     method: 'GET',
+        //     url: this.href,
+        // }).done(function(response) {
+        //     $("div.reports").html(response)
+        // }).error(function(response) {
+        //     alert("something went wrong :(");
+        // });
+
+
+        // SERVER RESPONDS WITH HTML
+
+        // $.get(this.href).success(function(response) {
+        //     $("div.reports").html(response)
+        // });
+
+        // SERVER RESPONDS WITH JSON
+
+        $.get(this.href).success(function(json) {
+            console.log(json)
+        })
     });
+
+    
 });
 
