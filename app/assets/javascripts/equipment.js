@@ -4,8 +4,10 @@ $(function() {
         $.ajax({
             method: 'GET',
             url: this.href,
-        }).done(function(data) {
-            console.log(data);
+        }).done(function(response) {
+            $("div.reports").html(response)
+        }).error(function(response) {
+            alert("something went wrong :(");
         });
     });
 });
