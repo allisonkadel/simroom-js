@@ -21337,3 +21337,257 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-11-08 16:04:12 -0800
+Processing by StaticController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+Redirected to http://localhost:3000/users/25
+Completed 302 Found in 10ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users/25" for 127.0.0.1 at 2018-11-08 16:04:13 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 99ms (Views: 95.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/trainings" for 127.0.0.1 at 2018-11-08 16:04:16 -0800
+Processing by TrainingsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  Rendering trainings/index.html.erb within layouts/application
+  [1m[36mTraining Load (0.4ms)[0m  [1m[34mSELECT "trainings".* FROM "trainings"[0m
+  ↳ app/views/trainings/_list.html.erb:2
+  [1m[36mEquipment Load (0.2ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (16.8ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (16.0ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (8.8ms)
+  Rendered trainings/_list.html.erb (60.9ms)
+  Rendered trainings/index.html.erb within layouts/application (62.6ms)
+Completed 200 OK in 172ms (Views: 159.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/trainings/11" for 127.0.0.1 at 2018-11-08 16:04:19 -0800
+Processing by TrainingsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  [1m[36mTraining Load (0.3ms)[0m  [1m[34mSELECT  "trainings".* FROM "trainings" WHERE "trainings"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/trainings_controller.rb:21
+  Rendering trainings/show.html.erb within layouts/application
+  [1m[36mEquipment Load (0.5ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (19.6ms)
+  Rendered trainings/show.html.erb within layouts/application (22.4ms)
+Completed 200 OK in 143ms (Views: 127.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/equipment/1/reports" for 127.0.0.1 at 2018-11-08 16:04:25 -0800
+Processing by ReportsController#index as HTML
+  Parameters: {"equipment_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  [1m[36mEquipment Load (0.2ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:4
+  Rendering reports/index.html.erb within layouts/application
+  [1m[36mReport Load (2.8ms)[0m  [1m[34mSELECT "reports".* FROM "reports" WHERE "reports"."equipment_id" = ?[0m  [["equipment_id", 1]]
+  ↳ app/views/reports/index.html.erb:5
+  Rendered reports/index.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 151ms (Views: 134.1ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/users/25" for 127.0.0.1 at 2018-11-08 16:04:38 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 103ms (Views: 97.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/equipment" for 127.0.0.1 at 2018-11-08 16:04:43 -0800
+Processing by EquipmentController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  Rendering equipment/index.html.erb within layouts/application
+  [1m[36mEquipment Load (0.4ms)[0m  [1m[34mSELECT "equipment".* FROM "equipment"[0m
+  ↳ app/views/equipment/index.html.erb:5
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reports" WHERE "reports"."equipment_id" = ?[0m  [["equipment_id", 1]]
+  ↳ app/views/equipment/index.html.erb:12
+  Rendered equipment/index.html.erb within layouts/application (20.4ms)
+Completed 200 OK in 125ms (Views: 116.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/equipment/1/reports" for 127.0.0.1 at 2018-11-08 16:04:52 -0800
+Processing by ReportsController#index as HTML
+  Parameters: {"equipment_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  [1m[36mEquipment Load (0.2ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:4
+  Rendering reports/index.html.erb within layouts/application
+  [1m[36mReport Load (0.3ms)[0m  [1m[34mSELECT "reports".* FROM "reports" WHERE "reports"."equipment_id" = ?[0m  [["equipment_id", 1]]
+  ↳ app/views/reports/index.html.erb:5
+  Rendered reports/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 110ms (Views: 96.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/25" for 127.0.0.1 at 2018-11-08 16:04:55 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 127ms (Views: 116.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/trainings" for 127.0.0.1 at 2018-11-08 16:04:56 -0800
+Processing by TrainingsController#index as HTML
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  Rendering trainings/index.html.erb within layouts/application
+  [1m[36mTraining Load (1.9ms)[0m  [1m[34mSELECT "trainings".* FROM "trainings"[0m
+  ↳ app/views/trainings/_list.html.erb:2
+  [1m[36mEquipment Load (0.1ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (16.5ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (14.3ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (10.3ms)
+  Rendered trainings/_list.html.erb (62.3ms)
+  Rendered trainings/index.html.erb within layouts/application (65.8ms)
+Completed 200 OK in 190ms (Views: 173.7ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/trainings/11" for 127.0.0.1 at 2018-11-08 16:05:00 -0800
+Processing by TrainingsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  [1m[36mTraining Load (0.3ms)[0m  [1m[34mSELECT  "trainings".* FROM "trainings" WHERE "trainings"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/trainings_controller.rb:21
+  Rendering trainings/show.html.erb within layouts/application
+  [1m[36mEquipment Load (0.2ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (15.3ms)
+  Rendered trainings/show.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 130ms (Views: 116.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/equipment/1/reports" for 127.0.0.1 at 2018-11-08 16:05:05 -0800
+Processing by ReportsController#index as HTML
+  Parameters: {"equipment_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  [1m[36mEquipment Load (0.1ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:4
+  Rendering reports/index.html.erb within layouts/application
+  [1m[36mReport Load (0.2ms)[0m  [1m[34mSELECT "reports".* FROM "reports" WHERE "reports"."equipment_id" = ?[0m  [["equipment_id", 1]]
+  ↳ app/views/reports/index.html.erb:5
+  Rendered reports/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 135ms (Views: 127.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/25" for 127.0.0.1 at 2018-11-08 16:05:10 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 115ms (Views: 105.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/equipment" for 127.0.0.1 at 2018-11-08 16:05:12 -0800
+Processing by EquipmentController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  Rendering equipment/index.html.erb within layouts/application
+  [1m[36mEquipment Load (0.2ms)[0m  [1m[34mSELECT "equipment".* FROM "equipment"[0m
+  ↳ app/views/equipment/index.html.erb:5
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reports" WHERE "reports"."equipment_id" = ?[0m  [["equipment_id", 1]]
+  ↳ app/views/equipment/index.html.erb:12
+  Rendered equipment/index.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 142ms (Views: 135.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/equipment/1/reports" for 127.0.0.1 at 2018-11-08 16:05:24 -0800
+Processing by ReportsController#index as HTML
+  Parameters: {"equipment_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  [1m[36mEquipment Load (0.3ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:4
+  Rendering reports/index.html.erb within layouts/application
+  [1m[36mReport Load (0.2ms)[0m  [1m[34mSELECT "reports".* FROM "reports" WHERE "reports"."equipment_id" = ?[0m  [["equipment_id", 1]]
+  ↳ app/views/reports/index.html.erb:5
+  Rendered reports/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 114ms (Views: 98.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/equipment" for 127.0.0.1 at 2018-11-08 16:12:57 -0800
+Processing by EquipmentController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  Rendering equipment/index.html.erb within layouts/application
+  Rendered equipment/index.html.erb within layouts/application (29.8ms)
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 0.3ms)
+
+
+  
+SyntaxError (/home/learn/Development/Code/projects/simroom-js/app/views/equipment/index.html.erb:12: syntax error, unexpected ')', expecting =>
+...pment_reports_path(equipment) );@output_buffer.safe_append='
+...                               ^
+/home/learn/Development/Code/projects/simroom-js/app/views/equipment/index.html.erb:16: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end ;
+             ^
+/home/learn/Development/Code/projects/simroom-js/app/views/equipment/index.html.erb:18: syntax error, unexpected keyword_ensure, expecting ')'
+/home/learn/Development/Code/projects/simroom-js/app/views/equipment/index.html.erb:20: syntax error, unexpected keyword_end, expecting ')'):
+  
+app/views/equipment/index.html.erb:12: syntax error, unexpected ')', expecting =>
+app/views/equipment/index.html.erb:16: syntax error, unexpected keyword_end, expecting ')'
+app/views/equipment/index.html.erb:18: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/equipment/index.html.erb:20: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/equipment" for 127.0.0.1 at 2018-11-08 16:15:36 -0800
+Processing by EquipmentController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  Rendering equipment/index.html.erb within layouts/application
+  [1m[36mEquipment Load (0.2ms)[0m  [1m[34mSELECT "equipment".* FROM "equipment"[0m
+  ↳ app/views/equipment/index.html.erb:5
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "reports" WHERE "reports"."equipment_id" = ?[0m  [["equipment_id", 1]]
+  ↳ app/views/equipment/index.html.erb:12
+  Rendered equipment/index.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 93ms (Views: 83.6ms | ActiveRecord: 0.7ms)
+
+
