@@ -23,7 +23,10 @@ $(function() {
         // SERVER RESPONDS WITH JSON
 
         $.get(this.href).success(function(json) {
-            console.log(json)
+            $("div.reports").html("")
+            json.forEach(report => {
+                $("div.reports").append(report.content)
+            })
         })
     });
 
