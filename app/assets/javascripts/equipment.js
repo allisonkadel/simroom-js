@@ -25,9 +25,9 @@ $(function() {
         $.get(this.href).success(function(json) {
             $("div.reports").html("")
             json.forEach(report => {
-                $("div.reports").append(report.content)
-            })
-        })
+                $("div.reports").append(`<li> ${report.created_at}: ${report.content} </li>`)
+            });
+        });
     });
 
     
