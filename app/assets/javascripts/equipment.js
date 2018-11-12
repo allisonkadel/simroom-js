@@ -33,6 +33,13 @@ $(function() {
         // });
     // });
 
-    
+    $("a.load_reports").on('click',function(e) {
+        e.preventDefault();
+        $.ajax({
+            url: this.href,
+            dataType: 'script'
+        });
+    });
+
 });
 
