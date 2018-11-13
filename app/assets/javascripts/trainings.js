@@ -8,4 +8,18 @@ $(function() {
         });
     });
 
+    $("form.new_training").on('submit',function(e) {
+        e.preventDefault();
+        alert("this is working")
+    })
+
+    // $.ajax({
+    //     method: 'GET',
+    //     url: this.href,
+    // }).done(function(response) {
+    //     $("div.reports").html(response)
+    // }).error(function(response) {
+    //     alert("something went wrong :(");
+    // });
+
 });

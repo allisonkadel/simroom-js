@@ -25885,3 +25885,27 @@ Processing by TrainingsController#index as HTML
 Completed 200 OK in 208ms (Views: 197.6ms | ActiveRecord: 1.3ms)
 
 
+Started GET "/trainings/new" for 127.0.0.1 at 2018-11-13 09:14:32 -0800
+Processing by TrainingsController#new as HTML
+  Rendering trainings/new.html.erb within layouts/application
+  [1m[36mEquipment Load (0.3ms)[0m  [1m[34mSELECT "equipment".* FROM "equipment"[0m
+  ↳ app/views/trainings/_form_attributes.html.erb:15
+  Rendered trainings/_form_attributes.html.erb (17.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  Rendered trainings/new.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 143ms (Views: 140.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/trainings/new" for 127.0.0.1 at 2018-11-13 09:17:38 -0800
+Processing by TrainingsController#new as HTML
+  Rendering trainings/new.html.erb within layouts/application
+  [1m[36mEquipment Load (4.7ms)[0m  [1m[34mSELECT "equipment".* FROM "equipment"[0m
+  ↳ app/views/trainings/_form_attributes.html.erb:15
+  Rendered trainings/_form_attributes.html.erb (14.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  Rendered trainings/new.html.erb within layouts/application (24.5ms)
+Completed 200 OK in 99ms (Views: 92.6ms | ActiveRecord: 4.9ms)
+
+
