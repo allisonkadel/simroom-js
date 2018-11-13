@@ -3,6 +3,10 @@ class ReportsController < ApplicationController
     def index
         @equipment = Equipment.find(params[:equipment_id])
         @reports = @equipment.reports
+        respond_to do |f|
+            f.html
+            f.json {render :json => @reports}
+        end
         #render :json => @reports
         #render :layout => false
     end

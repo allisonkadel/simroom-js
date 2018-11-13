@@ -4,8 +4,7 @@ $(function() {
         e.preventDefault();
 
         $.get(this.href).success(function(response) {
-          //  $("div.training_form").html(response)
-          console.log(response)
+            $("div.training_form").html(response)
         });
     });
 
