@@ -9,7 +9,7 @@
     <legend> <%= equipment.name %> </legend>
     </p>
     <p>
-    <%= link_to "#{equipment.reports.count} Reports", equipment_reports_path(equipment), :class => "load_reports", :remote => true %>
+    <%= link_to "#{equipment.reports.count} Reports", equipment_reports_path(equipment), :class => "load_reports" %>
     </p>
     </fieldset>
 

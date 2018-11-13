@@ -2,8 +2,8 @@ $(function() {
 
     // CLIENT SIDE LOGIC AJAX MODEL
 
-    // $("a.load_reports").on('click',function(e) {
-    //     e.preventDefault();
+    $("a.load_reports").on('click',function(e) {
+        e.preventDefault();
 
         // LOW LEVEL AJAX METHOD
 
@@ -16,30 +16,33 @@ $(function() {
         //     alert("something went wrong :(");
         // });
 
+        // HIGHER LEVEL JQUERY METHOD
 
-        // SERVER RESPONDS WITH HTML
+            // SERVER RESPONDS WITH HTML
 
-        // $.get(this.href).success(function(response) {
-        //     $("div.reports").html(response)
-        // });
+        $.get(this.href).success(function(response) {
+            $("div.reports").html(response)
+        });
 
-        // SERVER RESPONDS WITH JSON
+            // SERVER RESPONDS WITH JSON
 
-        // $.get(this.href).success(function(json) {
-        //     $("div.reports").html("")
-        //     json.forEach(report => {
-        //         $("div.reports").append(`<li> ${report.created_at}: ${report.content} </li>`)
-        //     });
-        // });
-    // });
-
-    $("a.load_reports").on('click',function(e) {
-        e.preventDefault();
-        $.ajax({
-            url: this.href,
-            dataType: 'script'
+        $.get(this.href).success(function(json) {
+            $("div.reports").html("")
+            json.forEach(report => {
+                $("div.reports").append(`<li> ${report.created_at}: ${report.content} </li>`)
+            });
         });
     });
+
+    // SERVER SIDE LOGIC AJAX MODEL
+
+    // $("a.load_reports").on('click',function(e) {
+    //     e.preventDefault();
+    //     $.ajax({
+    //         url: this.href,
+    //         dataType: 'script'
+    //     });
+    // });
 
 });
 
