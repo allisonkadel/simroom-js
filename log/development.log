@@ -27808,3 +27808,125 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/equipment/1/reports.json" for 127.0.0.1 at 2018-11-13 11:11:06 -0800
+Processing by ReportsController#index as JSON
+  Parameters: {"equipment_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  [1m[36mEquipment Load (0.2ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:4
+  [1m[36mReport Load (0.6ms)[0m  [1m[34mSELECT "reports".* FROM "reports" WHERE "reports"."equipment_id" = ?[0m  [["equipment_id", 1]]
+  ↳ app/controllers/reports_controller.rb:8
+Completed 200 OK in 113ms (Views: 30.7ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/equipment/1/reports.json" for 127.0.0.1 at 2018-11-13 11:14:51 -0800
+Processing by ReportsController#index as JSON
+  Parameters: {"equipment_id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  [1m[36mEquipment Load (0.3ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:4
+  [1m[36mReport Load (0.1ms)[0m  [1m[34mSELECT "reports".* FROM "reports" WHERE "reports"."equipment_id" = ?[0m  [["equipment_id", 1]]
+  ↳ app/controllers/reports_controller.rb:8
+Completed 200 OK in 20ms (Views: 7.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/equipment/1/reports" for 127.0.0.1 at 2018-11-13 11:16:22 -0800
+Processing by ReportsController#index as HTML
+  Parameters: {"equipment_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  [1m[36mEquipment Load (0.1ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:4
+  Rendering reports/index.html.erb within layouts/application
+  [1m[36mReport Load (0.2ms)[0m  [1m[34mSELECT "reports".* FROM "reports" WHERE "reports"."equipment_id" = ?[0m  [["equipment_id", 1]]
+  ↳ app/views/reports/index.html.erb:5
+  Rendered reports/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 148ms (Views: 91.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/equipment/1/reports.json" for 127.0.0.1 at 2018-11-13 11:16:26 -0800
+Processing by ReportsController#index as JSON
+  Parameters: {"equipment_id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  [1m[36mEquipment Load (0.1ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:4
+  [1m[36mReport Load (0.3ms)[0m  [1m[34mSELECT "reports".* FROM "reports" WHERE "reports"."equipment_id" = ?[0m  [["equipment_id", 1]]
+  ↳ app/controllers/reports_controller.rb:8
+Completed 200 OK in 24ms (Views: 9.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/equipment/1/reports.json" for 127.0.0.1 at 2018-11-13 11:18:06 -0800
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/learn/.rvm/gems/ruby-2.3.6/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by ReportsController#index as JSON
+  Parameters: {"equipment_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  [1m[36mEquipment Load (0.1ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:4
+  [1m[36mReport Load (0.2ms)[0m  [1m[34mSELECT "reports".* FROM "reports" WHERE "reports"."equipment_id" = ?[0m  [["equipment_id", 1]]
+  ↳ app/controllers/reports_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.44ms)
+Completed 200 OK in 289ms (Views: 132.3ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/equipment/1/reports.json" for 127.0.0.1 at 2018-11-13 11:20:12 -0800
+Processing by ReportsController#index as JSON
+  Parameters: {"equipment_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  [1m[36mEquipment Load (0.2ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:4
+  [1m[36mReport Load (0.1ms)[0m  [1m[34mSELECT "reports".* FROM "reports" WHERE "reports"."equipment_id" = ?[0m  [["equipment_id", 1]]
+  ↳ app/controllers/reports_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (52.62ms)
+Completed 200 OK in 147ms (Views: 105.1ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/equipment/1/reports.json" for 127.0.0.1 at 2018-11-13 11:21:20 -0800
+Processing by ReportsController#index as JSON
+  Parameters: {"equipment_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  [1m[36mEquipment Load (1.4ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:4
+  [1m[36mReport Load (0.3ms)[0m  [1m[34mSELECT "reports".* FROM "reports" WHERE "reports"."equipment_id" = ?[0m  [["equipment_id", 1]]
+  ↳ app/controllers/reports_controller.rb:8
+Completed 500 Internal Server Error in 113ms (ActiveRecord: 6.9ms)
+
+
+  
+SyntaxError (/home/learn/Development/Code/projects/simroom-js/app/serializers/report_serializer.rb:4: syntax error, unexpected =>, expecting '}'
+  belongs_to {:equipment => [:name}]
+                           ^
+/home/learn/Development/Code/projects/simroom-js/app/serializers/report_serializer.rb:4: syntax error, unexpected '}', expecting ']'
+  belongs_to {:equipment => [:name}]
+                                   ^):
+  
+app/serializers/report_serializer.rb:4: syntax error, unexpected =>, expecting '}'
+app/serializers/report_serializer.rb:4: syntax error, unexpected '}', expecting ']'
+app/controllers/reports_controller.rb:8:in `block (2 levels) in index'
+app/controllers/reports_controller.rb:6:in `index'
+Started GET "/equipment/1/reports.json" for 127.0.0.1 at 2018-11-13 11:21:34 -0800
+Processing by ReportsController#index as JSON
+  Parameters: {"equipment_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  [1m[36mEquipment Load (1.4ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:4
+  [1m[36mReport Load (0.5ms)[0m  [1m[34mSELECT "reports".* FROM "reports" WHERE "reports"."equipment_id" = ?[0m  [["equipment_id", 1]]
+  ↳ app/controllers/reports_controller.rb:8
+Completed 500 Internal Server Error in 80ms (ActiveRecord: 4.7ms)
+
+
+  
+SyntaxError (/home/learn/Development/Code/projects/simroom-js/app/serializers/report_serializer.rb:4: syntax error, unexpected =>, expecting '}'
+  belongs_to {:equipment => :name}
+                           ^):
+  
+app/serializers/report_serializer.rb:4: syntax error, unexpected =>, expecting '}'
+app/controllers/reports_controller.rb:8:in `block (2 levels) in index'
+app/controllers/reports_controller.rb:6:in `index'
