@@ -1,3 +1,11 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
+$(function() {
+
+    $("a.new_training").on('click',function(e) {
+        e.preventDefault();
+
+        $.get(this.href).success(function(response) {
+            $("div.training_form").html(response)
+        });
+    });
+
+});
