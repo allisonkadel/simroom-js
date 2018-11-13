@@ -1,5 +1,5 @@
-<%= link_to "Back to Dashboard", user_path(current_user) %>
- <ul> <% trainings.each do |training| %>
+
+<ul> <% trainings.each do |training| %>
     <fieldset>
     <legend> <%= link_to training.name, training_path(training) %> </legend>
 
