@@ -6,6 +6,7 @@ class TrainingsController < ApplicationController
 
     def new
         @training = Training.new
+        render :layout => false
     end
 
     def create

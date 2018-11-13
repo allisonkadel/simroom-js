@@ -4,11 +4,12 @@ $(function() {
         e.preventDefault();
 
         $.get(this.href).success(function(response) {
-            $("div.training_form").html(response)
+          //  $("div.training_form").html(response)
+          console.log(response)
         });
     });
 
-    $("form.new_training").on('submit',function(e) {
+    $("#new_training").on('submit',function(e) {
         e.preventDefault();
         alert("this is working");
     });
