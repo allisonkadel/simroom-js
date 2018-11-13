@@ -10,8 +10,8 @@ $(function() {
 
     $("form.new_training").on('submit',function(e) {
         e.preventDefault();
-        alert("this is working")
-    })
+        alert("this is working");
+    });
 
     // $.ajax({
     //     method: 'GET',
