@@ -59,19 +59,9 @@ const bindClickEvents = () => {
 
             $(`div.reports-${reports[0].equipment.id}`).html("")
             reports.forEach(report => {
-
-
                 let newReport = new Report(report)
-
-                console.log(newReport)
-
-                // $(`div.reports-${reports[0].equipment.id}`).append(
-                //     `<ul><fieldset>
-                //         <legend> ${report.created_at} </legend>
-                //         <p> ${report.content} </p>
-                //     </fieldset></ul>`
-                // );
-
+                let reportHtml = newReport.formatHtml()
+                $(`div.reports-${reports[0].equipment.id}`).append(reportHtml);
             });
         });
     });
@@ -84,12 +74,13 @@ function Report(report) {
     this.equipment = report.equipment
 }
 
-Report.prototype.formatHtml = () => {
+Report.prototype.formatHtml = function() {
     let reportHtml = 
         `<ul><fieldset>
-            <legend> ${report.created_at} </legend>
-            <p> ${report.content} </p>
+            <legend> ${this.created_at} </legend>
+            <p> ${this.content} </p>
         </fieldset></ul>`
+    return reportHtml;
 }
 
 // class Report {
