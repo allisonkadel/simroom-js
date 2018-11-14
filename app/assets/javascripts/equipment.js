@@ -56,8 +56,10 @@ const bindClickEvents = () => {
 
         $.get(`${this.href}.json`)
         .success(reports => {
+
             $(`div.reports-${reports[0].equipment.id}`).html("")
             reports.forEach(report => {
+
                 $(`div.reports-${reports[0].equipment.id}`).append(
                     `<ul><fieldset>
                         <legend> ${report.created_at} </legend>
@@ -67,5 +69,12 @@ const bindClickEvents = () => {
             });
         });
     });
+}
+
+function Report(report) {
+    this.id = report.id;
+    this.content = report.content;
+    this.created_at = report.created_at;
+    this.equipment_id = report.equipment.id
 }
 
