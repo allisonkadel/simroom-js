@@ -60,12 +60,18 @@ const bindClickEvents = () => {
             $(`div.reports-${reports[0].equipment.id}`).html("")
             reports.forEach(report => {
 
-                $(`div.reports-${reports[0].equipment.id}`).append(
-                    `<ul><fieldset>
-                        <legend> ${report.created_at} </legend>
-                        <p> ${report.content} </p>
-                    </fieldset></ul>`
-                );
+
+                let newReport = new Report(report)
+
+                console.log(newReport)
+
+                // $(`div.reports-${reports[0].equipment.id}`).append(
+                //     `<ul><fieldset>
+                //         <legend> ${report.created_at} </legend>
+                //         <p> ${report.content} </p>
+                //     </fieldset></ul>`
+                // );
+
             });
         });
     });
@@ -75,6 +81,16 @@ function Report(report) {
     this.id = report.id;
     this.content = report.content;
     this.created_at = report.created_at;
-    this.equipment_id = report.equipment.id
+    this.equipment = report.equipment
 }
+
+// class Report {
+//     debugger
+//     constructor(report) {
+//         this.id = report.id;
+//         this.content = report.content;
+//         this.created_at = report.created_at;
+//         this.equipment = report.equipment;
+//     }
+//   }
 

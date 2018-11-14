@@ -2,6 +2,7 @@ class TrainingsController < ApplicationController
 
     def index
         @trainings = Training.all
+        @training = Training.new
     end
 
     def new

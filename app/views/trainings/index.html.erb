@@ -2,8 +2,7 @@
 <%= link_to "See Only Upcoming Trainings", '/trainings/upcoming' %><br>
 <%= link_to "See Only Past Trainings", '/trainings/past' %><br>
 <%= link_to "Back to Dashboard", user_path(current_user) %><br>
-<%= link_to "Create New Training", new_training_path(@training), :class => "new_training" %><br>
 
-<div class="training_form"></div>
+<%= render :partial => "new", :locals => {:training => @training} %>
 
 <%= render :partial => "list", :locals => {:trainings => @trainings} %>
