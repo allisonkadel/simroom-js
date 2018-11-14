@@ -28449,3 +28449,525 @@ Processing by ReportsController#index as JSON
 Completed 200 OK in 212ms (Views: 201.1ms | ActiveRecord: 0.7ms)
 
 
+Started GET "/equipment" for 127.0.0.1 at 2018-11-14 08:44:43 -0800
+Processing by EquipmentController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  Rendering equipment/index.html.erb within layouts/application
+  [1m[36mEquipment Load (0.4ms)[0m  [1m[34mSELECT "equipment".* FROM "equipment"[0m
+  ↳ app/views/equipment/index.html.erb:5
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reports" WHERE "reports"."equipment_id" = ?[0m  [["equipment_id", 1]]
+  ↳ app/views/equipment/index.html.erb:12
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reports" WHERE "reports"."equipment_id" = ?[0m  [["equipment_id", 2]]
+  ↳ app/views/equipment/index.html.erb:12
+  Rendered equipment/index.html.erb within layouts/application (38.6ms)
+Completed 200 OK in 821ms (Views: 696.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/equipment/1/reports.json" for 127.0.0.1 at 2018-11-14 08:44:51 -0800
+Processing by ReportsController#index as JSON
+  Parameters: {"equipment_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  [1m[36mEquipment Load (0.2ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:4
+  [1m[36mReport Load (0.2ms)[0m  [1m[34mSELECT "reports".* FROM "reports" WHERE "reports"."equipment_id" = ?[0m  [["equipment_id", 1]]
+  ↳ app/controllers/reports_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.89ms)
+Completed 200 OK in 14ms (Views: 11.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/equipment" for 127.0.0.1 at 2018-11-14 08:57:05 -0800
+Processing by EquipmentController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  Rendering equipment/index.html.erb within layouts/application
+  [1m[36mEquipment Load (0.2ms)[0m  [1m[34mSELECT "equipment".* FROM "equipment"[0m
+  ↳ app/views/equipment/index.html.erb:5
+  [1m[35m (3.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "reports" WHERE "reports"."equipment_id" = ?[0m  [["equipment_id", 1]]
+  ↳ app/views/equipment/index.html.erb:12
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reports" WHERE "reports"."equipment_id" = ?[0m  [["equipment_id", 2]]
+  ↳ app/views/equipment/index.html.erb:12
+  Rendered equipment/index.html.erb within layouts/application (20.5ms)
+Completed 200 OK in 525ms (Views: 515.2ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/equipment/1/reports.json" for 127.0.0.1 at 2018-11-14 08:57:11 -0800
+Processing by ReportsController#index as JSON
+  Parameters: {"equipment_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  [1m[36mEquipment Load (0.2ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:4
+  [1m[36mReport Load (0.2ms)[0m  [1m[34mSELECT "reports".* FROM "reports" WHERE "reports"."equipment_id" = ?[0m  [["equipment_id", 1]]
+  ↳ app/controllers/reports_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.19ms)
+Completed 200 OK in 18ms (Views: 15.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/equipment/2/reports.json" for 127.0.0.1 at 2018-11-14 08:57:16 -0800
+Processing by ReportsController#index as JSON
+  Parameters: {"equipment_id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  [1m[36mEquipment Load (0.2ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:4
+  [1m[36mReport Load (3.5ms)[0m  [1m[34mSELECT "reports".* FROM "reports" WHERE "reports"."equipment_id" = ?[0m  [["equipment_id", 2]]
+  ↳ app/controllers/reports_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.73ms)
+Completed 200 OK in 21ms (Views: 9.5ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/equipment" for 127.0.0.1 at 2018-11-14 08:57:44 -0800
+Processing by EquipmentController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  Rendering equipment/index.html.erb within layouts/application
+  [1m[36mEquipment Load (0.2ms)[0m  [1m[34mSELECT "equipment".* FROM "equipment"[0m
+  ↳ app/views/equipment/index.html.erb:5
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "reports" WHERE "reports"."equipment_id" = ?[0m  [["equipment_id", 1]]
+  ↳ app/views/equipment/index.html.erb:12
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reports" WHERE "reports"."equipment_id" = ?[0m  [["equipment_id", 2]]
+  ↳ app/views/equipment/index.html.erb:12
+  Rendered equipment/index.html.erb within layouts/application (21.7ms)
+Completed 200 OK in 322ms (Views: 313.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/equipment/1/reports.json" for 127.0.0.1 at 2018-11-14 08:57:46 -0800
+Processing by ReportsController#index as JSON
+  Parameters: {"equipment_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  [1m[36mEquipment Load (0.2ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:4
+  [1m[36mReport Load (0.3ms)[0m  [1m[34mSELECT "reports".* FROM "reports" WHERE "reports"."equipment_id" = ?[0m  [["equipment_id", 1]]
+  ↳ app/controllers/reports_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.31ms)
+Completed 200 OK in 35ms (Views: 23.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/equipment" for 127.0.0.1 at 2018-11-14 09:00:57 -0800
+Processing by EquipmentController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  Rendering equipment/index.html.erb within layouts/application
+  [1m[36mEquipment Load (0.3ms)[0m  [1m[34mSELECT "equipment".* FROM "equipment"[0m
+  ↳ app/views/equipment/index.html.erb:5
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reports" WHERE "reports"."equipment_id" = ?[0m  [["equipment_id", 1]]
+  ↳ app/views/equipment/index.html.erb:12
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reports" WHERE "reports"."equipment_id" = ?[0m  [["equipment_id", 2]]
+  ↳ app/views/equipment/index.html.erb:12
+  Rendered equipment/index.html.erb within layouts/application (19.4ms)
+Completed 200 OK in 404ms (Views: 393.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/equipment/1/reports.json" for 127.0.0.1 at 2018-11-14 09:00:59 -0800
+Processing by ReportsController#index as JSON
+  Parameters: {"equipment_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  [1m[36mEquipment Load (3.3ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:4
+  [1m[36mReport Load (0.2ms)[0m  [1m[34mSELECT "reports".* FROM "reports" WHERE "reports"."equipment_id" = ?[0m  [["equipment_id", 1]]
+  ↳ app/controllers/reports_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.99ms)
+Completed 200 OK in 22ms (Views: 14.6ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/equipment" for 127.0.0.1 at 2018-11-14 09:02:55 -0800
+Processing by EquipmentController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  Rendering equipment/index.html.erb within layouts/application
+  [1m[36mEquipment Load (0.2ms)[0m  [1m[34mSELECT "equipment".* FROM "equipment"[0m
+  ↳ app/views/equipment/index.html.erb:5
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reports" WHERE "reports"."equipment_id" = ?[0m  [["equipment_id", 1]]
+  ↳ app/views/equipment/index.html.erb:12
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reports" WHERE "reports"."equipment_id" = ?[0m  [["equipment_id", 2]]
+  ↳ app/views/equipment/index.html.erb:12
+  Rendered equipment/index.html.erb within layouts/application (21.9ms)
+Completed 200 OK in 360ms (Views: 353.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/equipment/1/reports.json" for 127.0.0.1 at 2018-11-14 09:02:57 -0800
+Processing by ReportsController#index as JSON
+  Parameters: {"equipment_id"=>"1"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  [1m[36mEquipment Load (0.2ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:4
+  [1m[36mReport Load (2.9ms)[0m  [1m[34mSELECT "reports".* FROM "reports" WHERE "reports"."equipment_id" = ?[0m  [["equipment_id", 1]]
+  ↳ app/controllers/reports_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (6.59ms)
+Completed 200 OK in 23ms (Views: 9.9ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/equipment" for 127.0.0.1 at 2018-11-14 09:03:06 -0800
+Processing by EquipmentController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  Rendering equipment/index.html.erb within layouts/application
+  [1m[36mEquipment Load (2.2ms)[0m  [1m[34mSELECT "equipment".* FROM "equipment"[0m
+  ↳ app/views/equipment/index.html.erb:5
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reports" WHERE "reports"."equipment_id" = ?[0m  [["equipment_id", 1]]
+  ↳ app/views/equipment/index.html.erb:12
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reports" WHERE "reports"."equipment_id" = ?[0m  [["equipment_id", 2]]
+  ↳ app/views/equipment/index.html.erb:12
+  Rendered equipment/index.html.erb within layouts/application (24.7ms)
+Completed 200 OK in 347ms (Views: 342.3ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/equipment/1/reports.json" for 127.0.0.1 at 2018-11-14 09:03:07 -0800
+Processing by ReportsController#index as JSON
+  Parameters: {"equipment_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  [1m[36mEquipment Load (0.2ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:4
+  [1m[36mReport Load (0.2ms)[0m  [1m[34mSELECT "reports".* FROM "reports" WHERE "reports"."equipment_id" = ?[0m  [["equipment_id", 1]]
+  ↳ app/controllers/reports_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.75ms)
+Completed 200 OK in 29ms (Views: 16.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/equipment" for 127.0.0.1 at 2018-11-14 09:03:27 -0800
+Processing by EquipmentController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  Rendering equipment/index.html.erb within layouts/application
+  [1m[36mEquipment Load (0.2ms)[0m  [1m[34mSELECT "equipment".* FROM "equipment"[0m
+  ↳ app/views/equipment/index.html.erb:5
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "reports" WHERE "reports"."equipment_id" = ?[0m  [["equipment_id", 1]]
+  ↳ app/views/equipment/index.html.erb:12
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "reports" WHERE "reports"."equipment_id" = ?[0m  [["equipment_id", 2]]
+  ↳ app/views/equipment/index.html.erb:12
+  Rendered equipment/index.html.erb within layouts/application (19.7ms)
+Completed 200 OK in 356ms (Views: 349.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/equipment/1/reports.json" for 127.0.0.1 at 2018-11-14 09:03:28 -0800
+Processing by ReportsController#index as JSON
+  Parameters: {"equipment_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  [1m[36mEquipment Load (0.3ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:4
+  [1m[36mReport Load (0.5ms)[0m  [1m[34mSELECT "reports".* FROM "reports" WHERE "reports"."equipment_id" = ?[0m  [["equipment_id", 1]]
+  ↳ app/controllers/reports_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.61ms)
+Completed 200 OK in 26ms (Views: 16.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/equipment" for 127.0.0.1 at 2018-11-14 09:03:52 -0800
+Processing by EquipmentController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  Rendering equipment/index.html.erb within layouts/application
+  [1m[36mEquipment Load (0.2ms)[0m  [1m[34mSELECT "equipment".* FROM "equipment"[0m
+  ↳ app/views/equipment/index.html.erb:5
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reports" WHERE "reports"."equipment_id" = ?[0m  [["equipment_id", 1]]
+  ↳ app/views/equipment/index.html.erb:12
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reports" WHERE "reports"."equipment_id" = ?[0m  [["equipment_id", 2]]
+  ↳ app/views/equipment/index.html.erb:12
+  Rendered equipment/index.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 318ms (Views: 313.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/equipment/1/reports.json" for 127.0.0.1 at 2018-11-14 09:03:54 -0800
+Processing by ReportsController#index as JSON
+  Parameters: {"equipment_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  [1m[36mEquipment Load (0.1ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:4
+  [1m[36mReport Load (0.2ms)[0m  [1m[34mSELECT "reports".* FROM "reports" WHERE "reports"."equipment_id" = ?[0m  [["equipment_id", 1]]
+  ↳ app/controllers/reports_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.57ms)
+Completed 200 OK in 17ms (Views: 14.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/equipment/2/reports.json" for 127.0.0.1 at 2018-11-14 09:03:56 -0800
+Processing by ReportsController#index as JSON
+  Parameters: {"equipment_id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  [1m[36mEquipment Load (0.2ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:4
+  [1m[36mReport Load (0.2ms)[0m  [1m[34mSELECT "reports".* FROM "reports" WHERE "reports"."equipment_id" = ?[0m  [["equipment_id", 2]]
+  ↳ app/controllers/reports_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.9ms)
+Completed 200 OK in 20ms (Views: 9.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/equipment/1/reports.json" for 127.0.0.1 at 2018-11-14 09:03:58 -0800
+Processing by ReportsController#index as JSON
+  Parameters: {"equipment_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  [1m[36mEquipment Load (0.2ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:4
+  [1m[36mReport Load (0.3ms)[0m  [1m[34mSELECT "reports".* FROM "reports" WHERE "reports"."equipment_id" = ?[0m  [["equipment_id", 1]]
+  ↳ app/controllers/reports_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.85ms)
+Completed 200 OK in 19ms (Views: 12.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/equipment/2/reports.json" for 127.0.0.1 at 2018-11-14 09:03:59 -0800
+Processing by ReportsController#index as JSON
+  Parameters: {"equipment_id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  [1m[36mEquipment Load (0.2ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:4
+  [1m[36mReport Load (0.2ms)[0m  [1m[34mSELECT "reports".* FROM "reports" WHERE "reports"."equipment_id" = ?[0m  [["equipment_id", 2]]
+  ↳ app/controllers/reports_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.8ms)
+Completed 200 OK in 19ms (Views: 10.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/equipment/2/reports.json" for 127.0.0.1 at 2018-11-14 09:04:00 -0800
+Processing by ReportsController#index as JSON
+  Parameters: {"equipment_id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  [1m[36mEquipment Load (0.2ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:4
+  [1m[36mReport Load (0.2ms)[0m  [1m[34mSELECT "reports".* FROM "reports" WHERE "reports"."equipment_id" = ?[0m  [["equipment_id", 2]]
+  ↳ app/controllers/reports_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.82ms)
+Completed 200 OK in 19ms (Views: 8.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/equipment" for 127.0.0.1 at 2018-11-14 09:04:58 -0800
+Processing by EquipmentController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  Rendering equipment/index.html.erb within layouts/application
+  [1m[36mEquipment Load (0.3ms)[0m  [1m[34mSELECT "equipment".* FROM "equipment"[0m
+  ↳ app/views/equipment/index.html.erb:5
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "reports" WHERE "reports"."equipment_id" = ?[0m  [["equipment_id", 1]]
+  ↳ app/views/equipment/index.html.erb:12
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reports" WHERE "reports"."equipment_id" = ?[0m  [["equipment_id", 2]]
+  ↳ app/views/equipment/index.html.erb:12
+  Rendered equipment/index.html.erb within layouts/application (25.1ms)
+Completed 200 OK in 357ms (Views: 353.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/equipment/1/reports.json" for 127.0.0.1 at 2018-11-14 09:05:00 -0800
+Processing by ReportsController#index as JSON
+  Parameters: {"equipment_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  [1m[36mEquipment Load (0.1ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:4
+  [1m[36mReport Load (0.2ms)[0m  [1m[34mSELECT "reports".* FROM "reports" WHERE "reports"."equipment_id" = ?[0m  [["equipment_id", 1]]
+  ↳ app/controllers/reports_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.96ms)
+Completed 200 OK in 23ms (Views: 20.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/equipment/2/reports.json" for 127.0.0.1 at 2018-11-14 09:05:02 -0800
+Processing by ReportsController#index as JSON
+  Parameters: {"equipment_id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  [1m[36mEquipment Load (0.3ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:4
+  [1m[36mReport Load (0.3ms)[0m  [1m[34mSELECT "reports".* FROM "reports" WHERE "reports"."equipment_id" = ?[0m  [["equipment_id", 2]]
+  ↳ app/controllers/reports_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.64ms)
+Completed 200 OK in 36ms (Views: 22.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/equipment" for 127.0.0.1 at 2018-11-14 09:11:21 -0800
+Processing by EquipmentController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  Rendering equipment/index.html.erb within layouts/application
+  [1m[36mEquipment Load (3.8ms)[0m  [1m[34mSELECT "equipment".* FROM "equipment"[0m
+  ↳ app/views/equipment/index.html.erb:5
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reports" WHERE "reports"."equipment_id" = ?[0m  [["equipment_id", 1]]
+  ↳ app/views/equipment/index.html.erb:12
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reports" WHERE "reports"."equipment_id" = ?[0m  [["equipment_id", 2]]
+  ↳ app/views/equipment/index.html.erb:12
+  Rendered equipment/index.html.erb within layouts/application (24.3ms)
+Completed 200 OK in 346ms (Views: 335.3ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/equipment/1/reports.json" for 127.0.0.1 at 2018-11-14 09:11:22 -0800
+Processing by ReportsController#index as JSON
+  Parameters: {"equipment_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  [1m[36mEquipment Load (0.2ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:4
+  [1m[36mReport Load (0.2ms)[0m  [1m[34mSELECT "reports".* FROM "reports" WHERE "reports"."equipment_id" = ?[0m  [["equipment_id", 1]]
+  ↳ app/controllers/reports_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.1ms)
+Completed 200 OK in 22ms (Views: 13.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/equipment/2/reports.json" for 127.0.0.1 at 2018-11-14 09:11:32 -0800
+Processing by ReportsController#index as JSON
+  Parameters: {"equipment_id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  [1m[36mEquipment Load (0.1ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:4
+  [1m[36mReport Load (0.3ms)[0m  [1m[34mSELECT "reports".* FROM "reports" WHERE "reports"."equipment_id" = ?[0m  [["equipment_id", 2]]
+  ↳ app/controllers/reports_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.52ms)
+Completed 200 OK in 21ms (Views: 12.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/equipment" for 127.0.0.1 at 2018-11-14 09:17:32 -0800
+Processing by EquipmentController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  Rendering equipment/index.html.erb within layouts/application
+  [1m[36mEquipment Load (0.2ms)[0m  [1m[34mSELECT "equipment".* FROM "equipment"[0m
+  ↳ app/views/equipment/index.html.erb:5
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reports" WHERE "reports"."equipment_id" = ?[0m  [["equipment_id", 1]]
+  ↳ app/views/equipment/index.html.erb:12
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reports" WHERE "reports"."equipment_id" = ?[0m  [["equipment_id", 2]]
+  ↳ app/views/equipment/index.html.erb:12
+  Rendered equipment/index.html.erb within layouts/application (23.4ms)
+Completed 200 OK in 396ms (Views: 386.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/equipment/1/reports.json" for 127.0.0.1 at 2018-11-14 09:17:34 -0800
+Processing by ReportsController#index as JSON
+  Parameters: {"equipment_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  [1m[36mEquipment Load (0.2ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:4
+  [1m[36mReport Load (0.2ms)[0m  [1m[34mSELECT "reports".* FROM "reports" WHERE "reports"."equipment_id" = ?[0m  [["equipment_id", 1]]
+  ↳ app/controllers/reports_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.28ms)
+Completed 200 OK in 32ms (Views: 15.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/equipment" for 127.0.0.1 at 2018-11-14 09:18:15 -0800
+Processing by EquipmentController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  Rendering equipment/index.html.erb within layouts/application
+  [1m[36mEquipment Load (0.2ms)[0m  [1m[34mSELECT "equipment".* FROM "equipment"[0m
+  ↳ app/views/equipment/index.html.erb:5
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "reports" WHERE "reports"."equipment_id" = ?[0m  [["equipment_id", 1]]
+  ↳ app/views/equipment/index.html.erb:12
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "reports" WHERE "reports"."equipment_id" = ?[0m  [["equipment_id", 2]]
+  ↳ app/views/equipment/index.html.erb:12
+  Rendered equipment/index.html.erb within layouts/application (23.8ms)
+Completed 200 OK in 367ms (Views: 356.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/equipment/1/reports.json" for 127.0.0.1 at 2018-11-14 09:18:17 -0800
+Processing by ReportsController#index as JSON
+  Parameters: {"equipment_id"=>"1"}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  [1m[36mEquipment Load (0.2ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:4
+  [1m[36mReport Load (0.3ms)[0m  [1m[34mSELECT "reports".* FROM "reports" WHERE "reports"."equipment_id" = ?[0m  [["equipment_id", 1]]
+  ↳ app/controllers/reports_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.93ms)
+Completed 200 OK in 27ms (Views: 13.4ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/equipment/2/reports.json" for 127.0.0.1 at 2018-11-14 09:18:22 -0800
+Processing by ReportsController#index as JSON
+  Parameters: {"equipment_id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  [1m[36mEquipment Load (1.1ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:4
+  [1m[36mReport Load (0.2ms)[0m  [1m[34mSELECT "reports".* FROM "reports" WHERE "reports"."equipment_id" = ?[0m  [["equipment_id", 2]]
+  ↳ app/controllers/reports_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.08ms)
+Completed 200 OK in 21ms (Views: 10.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/equipment" for 127.0.0.1 at 2018-11-14 09:18:48 -0800
+Processing by EquipmentController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  Rendering equipment/index.html.erb within layouts/application
+  [1m[36mEquipment Load (0.2ms)[0m  [1m[34mSELECT "equipment".* FROM "equipment"[0m
+  ↳ app/views/equipment/index.html.erb:5
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reports" WHERE "reports"."equipment_id" = ?[0m  [["equipment_id", 1]]
+  ↳ app/views/equipment/index.html.erb:12
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reports" WHERE "reports"."equipment_id" = ?[0m  [["equipment_id", 2]]
+  ↳ app/views/equipment/index.html.erb:12
+  Rendered equipment/index.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 359ms (Views: 343.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/equipment/1/reports.json" for 127.0.0.1 at 2018-11-14 09:18:49 -0800
+Processing by ReportsController#index as JSON
+  Parameters: {"equipment_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  [1m[36mEquipment Load (0.2ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:4
+  [1m[36mReport Load (0.3ms)[0m  [1m[34mSELECT "reports".* FROM "reports" WHERE "reports"."equipment_id" = ?[0m  [["equipment_id", 1]]
+  ↳ app/controllers/reports_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (10.59ms)
+Completed 200 OK in 33ms (Views: 20.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/equipment/2/reports.json" for 127.0.0.1 at 2018-11-14 09:18:53 -0800
+Processing by ReportsController#index as JSON
+  Parameters: {"equipment_id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  [1m[36mEquipment Load (0.2ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:4
+  [1m[36mReport Load (0.2ms)[0m  [1m[34mSELECT "reports".* FROM "reports" WHERE "reports"."equipment_id" = ?[0m  [["equipment_id", 2]]
+  ↳ app/controllers/reports_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.43ms)
+Completed 200 OK in 31ms (Views: 13.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/equipment" for 127.0.0.1 at 2018-11-14 09:20:22 -0800
+Processing by EquipmentController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  Rendering equipment/index.html.erb within layouts/application
+  [1m[36mEquipment Load (0.2ms)[0m  [1m[34mSELECT "equipment".* FROM "equipment"[0m
+  ↳ app/views/equipment/index.html.erb:5
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reports" WHERE "reports"."equipment_id" = ?[0m  [["equipment_id", 1]]
+  ↳ app/views/equipment/index.html.erb:12
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reports" WHERE "reports"."equipment_id" = ?[0m  [["equipment_id", 2]]
+  ↳ app/views/equipment/index.html.erb:12
+  Rendered equipment/index.html.erb within layouts/application (21.2ms)
+Completed 200 OK in 137ms (Views: 128.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/equipment/1/reports.json" for 127.0.0.1 at 2018-11-14 09:20:24 -0800
+Processing by ReportsController#index as JSON
+  Parameters: {"equipment_id"=>"1"}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  [1m[36mEquipment Load (0.2ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:4
+  [1m[36mReport Load (0.2ms)[0m  [1m[34mSELECT "reports".* FROM "reports" WHERE "reports"."equipment_id" = ?[0m  [["equipment_id", 1]]
+  ↳ app/controllers/reports_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.22ms)
+Completed 200 OK in 28ms (Views: 16.5ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/equipment/2/reports.json" for 127.0.0.1 at 2018-11-14 09:20:32 -0800
+Processing by ReportsController#index as JSON
+  Parameters: {"equipment_id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  [1m[36mEquipment Load (0.4ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:4
+  [1m[36mReport Load (0.2ms)[0m  [1m[34mSELECT "reports".* FROM "reports" WHERE "reports"."equipment_id" = ?[0m  [["equipment_id", 2]]
+  ↳ app/controllers/reports_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.74ms)
+Completed 200 OK in 23ms (Views: 12.3ms | ActiveRecord: 0.9ms)
+
+

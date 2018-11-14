@@ -53,8 +53,19 @@ $(() => {
 const bindClickEvents = () => {
     $("a.load_reports").on('click',function(e){
         e.preventDefault();
+
         $.get(`${this.href}.json`)
-        .success(response => console.log(response))
+        .success(reports => {
+            $(`div.reports-${reports[0].equipment.id}`).html("")
+            reports.forEach(report => {
+                $(`div.reports-${reports[0].equipment.id}`).append(
+                    `<ul><fieldset>
+                        <legend> ${report.created_at} </legend>
+                        <p> ${report.content} </p>
+                    </fieldset></ul>`
+                );
+            });
+        });
     });
 }
 
