@@ -78,10 +78,18 @@ const bindClickEvents = () => {
 }
 
 function Report(report) {
-    this.id = report.id;
-    this.content = report.content;
-    this.created_at = report.created_at;
+    this.id = report.id
+    this.content = report.content
+    this.created_at = report.created_at
     this.equipment = report.equipment
+}
+
+Report.prototype.formatHtml = () => {
+    let reportHtml = 
+        `<ul><fieldset>
+            <legend> ${report.created_at} </legend>
+            <p> ${report.content} </p>
+        </fieldset></ul>`
 }
 
 // class Report {
