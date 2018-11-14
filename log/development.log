@@ -31327,3 +31327,117 @@ Processing by EquipmentController#index as HTML
 Completed 200 OK in 130ms (Views: 122.0ms | ActiveRecord: 0.9ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-11-14 13:31:48 -0800
+Processing by StaticController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+Redirected to http://localhost:3000/users/25
+Completed 302 Found in 28ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/users/25" for 127.0.0.1 at 2018-11-14 13:31:48 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 90ms (Views: 83.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/trainings" for 127.0.0.1 at 2018-11-14 13:31:49 -0800
+  
+SyntaxError (/home/learn/Development/Code/projects/simroom-js/app/controllers/trainings_controller.rb:25: syntax error, unexpected ':', expecting '}'
+            f.json {json: @training}
+                         ^):
+  
+app/controllers/trainings_controller.rb:25: syntax error, unexpected ':', expecting '}'
+Started GET "/trainings" for 127.0.0.1 at 2018-11-14 13:32:29 -0800
+Processing by TrainingsController#index as HTML
+  [1m[36mUser Load (15.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  Rendering trainings/index.html.erb within layouts/application
+  [1m[36mEquipment Load (0.2ms)[0m  [1m[34mSELECT "equipment".* FROM "equipment"[0m
+  ↳ app/views/trainings/_form_attributes.html.erb:15
+  Rendered trainings/_form_attributes.html.erb (24.6ms)
+  Rendered trainings/_new.html.erb (30.5ms)
+  [1m[36mTraining Load (0.2ms)[0m  [1m[34mSELECT "trainings".* FROM "trainings"[0m
+  ↳ app/views/trainings/_list.html.erb:2
+  [1m[36mEquipment Load (0.2ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (17.1ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (7.0ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (10.2ms)
+  [1m[36mEquipment Load (0.1ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (6.9ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (6.8ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (9.8ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (7.3ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (6.7ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (10.2ms)
+  Rendered trainings/_list.html.erb (105.4ms)
+  Rendered trainings/index.html.erb within layouts/application (139.5ms)
+Completed 200 OK in 300ms (Views: 220.0ms | ActiveRecord: 23.5ms)
+
+
+Started GET "/trainings/11" for 127.0.0.1 at 2018-11-14 13:32:34 -0800
+Processing by TrainingsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  [1m[36mTraining Load (0.2ms)[0m  [1m[34mSELECT  "trainings".* FROM "trainings" WHERE "trainings"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/trainings_controller.rb:22
+  Rendering trainings/show.html.erb within layouts/application
+  [1m[36mEquipment Load (0.2ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (11.6ms)
+  Rendered trainings/show.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 133ms (Views: 117.3ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/trainings/11.json" for 127.0.0.1 at 2018-11-14 13:32:38 -0800
+Processing by TrainingsController#show as JSON
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  [1m[36mTraining Load (0.1ms)[0m  [1m[34mSELECT  "trainings".* FROM "trainings" WHERE "trainings"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/trainings_controller.rb:22
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Training (0.58ms)
+Completed 200 OK in 148ms (Views: 137.7ms | ActiveRecord: 0.2ms)
+
+

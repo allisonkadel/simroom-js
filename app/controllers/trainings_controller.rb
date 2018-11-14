@@ -6,8 +6,7 @@ class TrainingsController < ApplicationController
     end
 
     def new
-        @training = Training.new
-        render :layout => false
+        #@training = Training.new
     end
 
     def create
@@ -21,6 +20,10 @@ class TrainingsController < ApplicationController
 
     def show
         @training = Training.find(params[:id])
+        respond_to do |f|
+            f.html
+            f.json {render json: @training}
+        end
     end
 
     def edit
