@@ -31441,3 +31441,18 @@ Processing by TrainingsController#show as JSON
 Completed 200 OK in 148ms (Views: 137.7ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/trainings/11.json" for 127.0.0.1 at 2018-11-14 13:44:07 -0800
+Processing by TrainingsController#show as JSON
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  [1m[36mTraining Load (0.6ms)[0m  [1m[34mSELECT  "trainings".* FROM "trainings" WHERE "trainings"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/trainings_controller.rb:22
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/trainings_controller.rb:25
+[active_model_serializers]   [1m[36mEquipment Load (0.3ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/trainings_controller.rb:25
+[active_model_serializers] Rendered TrainingSerializer with ActiveModelSerializers::Adapter::Attributes (117.87ms)
+Completed 200 OK in 220ms (Views: 146.0ms | ActiveRecord: 5.0ms)
+
+
