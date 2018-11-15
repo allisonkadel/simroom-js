@@ -42,7 +42,15 @@ const bindTrainingClickEvents = () => {
         fetch('/trainings.json')
     });
 
-    
+    function Training(training) {
+        this.id = training.id
+        this.name = training.name
+        this.desription = training.description
+        this.simroom = training.simroom
+        this.date = training.date
+        this.equipment_id = training.equipment_id
+        this.user_id = training.user_id
+    }
 
 
     // $.ajax({
