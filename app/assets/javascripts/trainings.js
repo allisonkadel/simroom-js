@@ -16,7 +16,11 @@ $(function() {
             data: {
                 'authenticity_token': $("input[name='authenticity_token']").val(),
                 'training': {
-                    'name': $("#training_name").val()
+                    'name': $("#training_name").val(),
+                    'description': $("#training_description").val(),
+                    'simroom': $("#training_simroom").val(),
+                    'date': $("#training_date").val(),
+                    'equipment_id': $("#training_equipment_id").val()
                 } 
             },
             success: function(response) {

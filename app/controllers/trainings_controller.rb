@@ -12,11 +12,10 @@ class TrainingsController < ApplicationController
     def create
         @training = Training.new(training_params)
         if @training.save
-            respond_to do |f|
-                f.html
-                f.json {render json: @training}
-            end
+            raise params.inspect
+            render :show, :layout => false
         else
+            raise params.inspect
            # render :index
         end
     end
