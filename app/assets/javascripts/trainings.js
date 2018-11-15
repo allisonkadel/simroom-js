@@ -2,7 +2,8 @@ $(() => {
     bindTrainingClickEvents();
 });
 
-$(function() {
+
+const bindTrainingClickEvents = () => {    
 
     $(".new_training").on("click", function(e) {
         e.preventDefault();
@@ -41,6 +42,7 @@ $(function() {
         fetch('/trainings.json')
     });
 
+    
 
 
     // $.ajax({
@@ -51,5 +53,3 @@ $(function() {
     // }).error(function(response) {
     //     alert("something went wrong :(");
     // });
-
-});
