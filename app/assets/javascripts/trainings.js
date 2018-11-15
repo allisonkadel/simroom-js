@@ -26,6 +26,7 @@ $(function() {
             },
             success: function(response) {
                 $('ul').prepend(response)
+                $('.back_to_trainings').remove()
             }
         });
     });
