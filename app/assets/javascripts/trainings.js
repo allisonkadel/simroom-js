@@ -10,7 +10,19 @@ $(function() {
 
     $("#new_training").on('submit',function(e) {
         e.preventDefault();
-        console.log(this)
+        $.ajax({
+            type: "POST",
+            url: this.action,
+            data: {
+                'authenticity_token': $("input[name='authenticity_token']").val(),
+                'training': {
+                    'name': $("#training_name").val()
+                } 
+            },
+            success: function(response) {
+                console.log(response)
+            }
+        });
     });
 
     // $.ajax({

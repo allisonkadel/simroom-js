@@ -7,8 +7,6 @@ class ReportsController < ApplicationController
             f.html
             f.json {render :json => @reports}
         end
-        #render :json => @reports
-        #render :layout => false
     end
 
     def new

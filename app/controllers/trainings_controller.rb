@@ -6,15 +6,18 @@ class TrainingsController < ApplicationController
     end
 
     def new
-        #@training = Training.new
+        @training = Training.new
     end
 
     def create
         @training = Training.new(training_params)
         if @training.save
-            redirect_to trainings_path
+            respond_to do |f|
+                f.html
+                f.json {render json: @training}
+            end
         else
-            render :new
+           # render :index
         end
     end
 
