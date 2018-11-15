@@ -1,9 +1,6 @@
 
-<ul> <% trainings.each do |training| %>
-    <fieldset>
-    <legend> <%= link_to training.name, training_path(training) %> </legend>
+<ul> <% trainings.reverse.each do |training| %>
 
-    <%= render :partial => "attributes", :locals => {:training => training} %>
+    <%= render :partial => 'training', :locals => {:training => training} %>
 
-    </fieldset>
 <% end %> </ul>

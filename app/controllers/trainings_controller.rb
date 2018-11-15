@@ -12,10 +12,9 @@ class TrainingsController < ApplicationController
     def create
         @training = Training.new(training_params)
         if @training.save
-            #raise params.inspect
             render :show, :layout => false
         else
-            
+            raise params.inspect
         end
     end
 

@@ -1,0 +1,6 @@
+<fieldset>
+<legend> <%= link_to training.name, training_path(training) %> </legend>
+
+<%= render :partial => "attributes", :locals => {:training => training} %>
+
+</fieldset>
