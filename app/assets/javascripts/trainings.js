@@ -1,3 +1,7 @@
+$(() => {
+    bindTrainingClickEvents();
+});
+
 $(function() {
 
     $(".new_training").on("click", function(e) {
@@ -32,10 +36,12 @@ $(function() {
         });
     });
 
-    $('.show_link').on('click',(e) => {
+    $('.show_link').on('click', function(e) {
         e.preventDefault();
         fetch('/trainings.json')
     });
+
+
 
     // $.ajax({
     //     method: 'GET',
