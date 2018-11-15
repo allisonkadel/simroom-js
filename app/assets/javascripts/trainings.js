@@ -32,6 +32,11 @@ $(function() {
         });
     });
 
+    $('.show_link').on('click',(e) => {
+        e.preventDefault();
+        fetch('/trainings.json')
+    });
+
     // $.ajax({
     //     method: 'GET',
     //     url: this.href,
