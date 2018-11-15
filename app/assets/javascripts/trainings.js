@@ -13,17 +13,18 @@ $(function() {
         $.ajax({
             type: "POST",
             url: this.action,
-            data: {
-                'authenticity_token': $("input[name='authenticity_token']").val(),
-                'training': {
-                    'name': $("#training_name").val(),
-                    'description': $("#training_description").val(),
-                    'simroom': $("#training_simroom").val(),
-                    'date': $("#training_date").val(),
-                    'equipment_id': $("#training_equipment_id").val(),
-                    'user_id': 25
-                } 
-            },
+            data: $(this).serialize(),
+            // data: {
+            //     'authenticity_token': $("input[name='authenticity_token']").val(),
+            //     'training': {
+            //         'name': $("#training_name").val(),
+            //         'description': $("#training_description").val(),
+            //         'simroom': $("#training_simroom").val(),
+            //         'date': $("#training_date").val(),
+            //         'equipment_id': $("#training_equipment_id").val(),
+            //         'user_id': 25
+            //     } 
+            // },
             success: function(response) {
                 $('ul').prepend(response)
                 $('.back_to_trainings').remove()
