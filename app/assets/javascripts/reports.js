@@ -57,13 +57,15 @@ const bindClickEvents = () => {
         $.get(`${this.href}.json`)
         .success(reports => {
 
-            $(`div.reports-${reports[0].equipment.id}`).html("")
+            $(`div.reports-${reports[0].equipment.id}`).html(`<a href='equipment/${reports[0].equipment.id}/reports/new'>Create New Report</a>`)
             reports.forEach(report => {
                 let newReport = new Report(report)
                 let reportHtml = newReport.formatHtml()
                 $(`div.reports-${reports[0].equipment.id}`).append(reportHtml);
             });
         });
+
+        $("")
     });
 }
 
