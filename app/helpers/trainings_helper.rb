@@ -1,7 +1,7 @@
 module TrainingsHelper
 
     def admin_edit_button
-        button_to "Edit Training", edit_training_path, 
+        button_to "Edit Training", edit_training_path(@training), 
         method: :get if admin?
     end
 
