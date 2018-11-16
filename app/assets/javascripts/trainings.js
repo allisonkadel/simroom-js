@@ -34,6 +34,8 @@ const bindTrainingClickEvents = () => {
 
             // how do I get the id of the training we just created?
             // we need this to insert a link on the training title
+
+            // Do I want to make a Training instance for this?
             success: function(response) {
                 $('ul').prepend(response)
                 $('.back_to_trainings').remove()
@@ -46,6 +48,9 @@ const bindTrainingClickEvents = () => {
         $.get(`${this.href}.json`).success(function(training) {
             let newTraining = new Training(training)
             console.log(newTraining)
+            let TrainingHtml = newTraining.formatShow()
+            console.log(TrainingHtml)
+            $('body').html(TrainingHtml)
         });
     });
 
@@ -54,11 +59,50 @@ const bindTrainingClickEvents = () => {
     function Training(training) {
         this.id = training.id
         this.name = training.name
-        this.desription = training.description
+        this.description = training.description
         this.simroom = training.simroom
         this.date = training.date
-        this.equipment_id = training.equipment_id
-        this.user_id = training.user_id
+        this.equipment = training.equipment
+        this.user = training.user
+    }
+
+    Training.prototype.formatShow = function() {
+        let currentUserRoute = $("#current_user")[0].href
+        let currentUser = /\d+$/.exec(currentUserRoute);
+        let editButton = "";
+        let cancelButton = "";
+        if(currentUser == this.user.id) {
+            editButton = 'SOME HTML'
+            cancelButton = 'SOME OTHER HTML'
+        }
+        let TrainingHtml = `
+        <fieldset>
+        <legend> ${this.name} </legend>
+        
+        <p>
+        Description: ${this.description}
+        </p>
+        <p>
+        Room: ${this.simroom}
+        </p>
+        <p>
+        Date: ${this.date}
+        </p>
+        <p>
+        Equipment: <a href="/equipment/${this.equipment.id}/reports">${this.equipment.name}</a>
+        </p>
+        <p>
+        Created by: ${this.user.email}
+        </p>
+        
+        </fieldset>
+        
+        ${editButton}
+        ${cancelButton}
+        
+        <a href="/trainings">Back To Trainings</a>
+       `
+        return TrainingHtml;
     }
 
 
