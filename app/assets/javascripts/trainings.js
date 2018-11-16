@@ -14,12 +14,12 @@ const bindTrainingClickEvents = () => {
     });
 
     $(document).on('submit', '#new_training',function(e) {
-        alert("this worked")
         e.preventDefault();
         $.ajax({
             type: "POST",
             url: this.action,
             data: $(this).serialize(),
+            dataType: 'json',
             // data: {
             //     'authenticity_token': $("input[name='authenticity_token']").val(),
             //     'training': {
@@ -37,6 +37,7 @@ const bindTrainingClickEvents = () => {
 
             // Do I want to make a Training instance for this?
             success: function(response) {
+                console.log(response)
                 $('ul').prepend(response)
                 $('.back_to_trainings').remove()
             }
