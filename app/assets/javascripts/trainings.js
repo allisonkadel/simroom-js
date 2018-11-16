@@ -114,7 +114,7 @@ const bindTrainingClickEvents = () => {
         ${editButton}
         ${cancelButton}
 
-        <button class="next-training" id="data-id-${this.id}">Next Training</button>
+        <button class="next-training" data-id=${this.id}>Next Training</button>
        `
         return TrainingHtml;
     }
