@@ -36,10 +36,11 @@ const bindTrainingClickEvents = () => {
             // we need this to insert a link on the training title
 
             // Do I want to make a Training instance for this?
-            success: function(response) {
-                console.log(response)
-                $('ul').prepend(response)
-                $('.back_to_trainings').remove()
+            success: function(training) {
+                let newTraining = new Training(training)
+                console.log(newTraining)
+                //$('ul').prepend(response)
+                //$('.back_to_trainings').remove()
             }
         });
     });

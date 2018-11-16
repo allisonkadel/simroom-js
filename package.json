@@ -1,5 +1,8 @@
 {
   "name": "simroom",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "handlebars": "^4.0.12",
+    "handlebars-loader": "^1.7.0"
+  }
 }
