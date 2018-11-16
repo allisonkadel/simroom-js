@@ -43,9 +43,10 @@ const bindTrainingClickEvents = () => {
 
     $('.show_link').on('click', function(e) {
         e.preventDefault();
-        fetch(this.href)
-        .then(response => console.log(response))
-        //.then(json => console.log(json))
+        $.get(`${this.href}.json`).success(function(training) {
+            let newTraining = new Training(training)
+            console.log(newTraining)
+        });
     });
 
 }
