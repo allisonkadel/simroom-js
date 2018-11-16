@@ -71,9 +71,13 @@ const bindTrainingClickEvents = () => {
         let currentUser = /\d+$/.exec(currentUserRoute);
         let editButton = "";
         let cancelButton = "";
+        // cancel button is broken - need to send authenticity token manually
         if(currentUser == this.user.id) {
-            editButton = 'SOME HTML'
-            cancelButton = 'SOME OTHER HTML'
+            editButton = `<form class="button_to" method="get" action="/trainings/${this.id}/edit">
+                                <input class="back_to_trainings" value="Edit Training" type="submit"></form>`
+            cancelButton = `<form class="button_to" method="post" action="/trainings/${this.id}">
+                                <input class="back_to_trainings" value="Cancel Training" type="submit">
+                                <input name="_method" value="delete" type="hidden"></form>`
         }
         let TrainingHtml = `
         <fieldset>
