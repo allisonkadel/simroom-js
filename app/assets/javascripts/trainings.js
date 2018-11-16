@@ -47,16 +47,19 @@ const bindTrainingClickEvents = () => {
         e.preventDefault();
         $.get(`${this.href}.json`).success(function(training) {
             let newTraining = new Training(training)
-            console.log(newTraining)
             let TrainingHtml = newTraining.formatShow()
-            console.log(TrainingHtml)
             $('body').html(TrainingHtml)
         });
     });
 
     $(document).on('click','.next-training', function(e) {
+        debugger
         let id = $(this).attr('data-id')
-        $.get(`/trainings/${id}/next`)
+        console.log(id)
+        $.get(`/trainings/${id}/next`).success(function(response) {
+            alert("it worked")
+            console.log(response)
+        });
     });
 
 }
@@ -111,7 +114,7 @@ const bindTrainingClickEvents = () => {
         ${editButton}
         ${cancelButton}
 
-        <button class="next-training">Next Training</button>
+        <button class="next-training" id="data-id-${this.id}">Next Training</button>
        `
         return TrainingHtml;
     }
