@@ -10,4 +10,8 @@ class Training < ApplicationRecord
 
     scope :future_trainings, -> { where("date > ?", Date.yesterday) }
     scope :past_trainings, -> { where("date < ?", Date.today) }
+
+    def next
+        self.where("id > ", id).first
+    end
 end
