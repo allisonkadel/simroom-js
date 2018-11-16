@@ -54,6 +54,11 @@ const bindTrainingClickEvents = () => {
         });
     });
 
+    $(document).on('click','.next-training', function(e) {
+        let id = $(this).attr('data-id')
+        $.get(`/trainings/${id}/next`)
+    });
+
 }
 
     function Training(training) {
