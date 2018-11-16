@@ -42,6 +42,11 @@ class TrainingsController < ApplicationController
         end
     end
 
+    def next
+        @training = Training.find(params[:id])
+        @next_training = @training.next
+    end
+
     def destroy
         @training = Training.find(params[:id])
         @training.destroy if admin?
