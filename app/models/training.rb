@@ -12,6 +12,12 @@ class Training < ApplicationRecord
     scope :past_trainings, -> { where("date < ?", Date.today) }
 
     def next
-        self.where("id > ", id).first
+        training = Training.where("id > ?", id).first
+
+        if training
+            training
+        else
+            Training.first
+        end
     end
 end

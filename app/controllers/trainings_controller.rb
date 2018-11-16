@@ -45,6 +45,7 @@ class TrainingsController < ApplicationController
     def next
         @training = Training.find(params[:id])
         @next_training = @training.next
+        render :json => @next_training
     end
 
     def destroy
