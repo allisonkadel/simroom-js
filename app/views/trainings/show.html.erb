@@ -10,19 +10,3 @@
 
 <%= link_to "Back to Trainings", trainings_path, :class => "back_to_trainings" %>
 
-
-
-
-
-<script id="training-template" type="text/x-handlebars-template">
-    <fieldset>
-        <legend> <a class="show_link" href="/trainings/{{id}}">{{name}}</a> </legend>
-
-<p> Description: {{description}} </p>
-<p> Room: {{simroom}} </p>
-<p> Date: {{date}} </p>
-<p> Equipment: <a href="/equipment/{{equipment.id}}/reports">{{equipment.name}}</a> </p>
-<p> Created by: {{user.email}} </p>
-
-    </fieldset>
-</script>

@@ -7,3 +7,17 @@
 <%= link_to "Schedule New Training", new_training_path, :class => "new_training" %>
 <div class= "training_form"></div>
 <%= render :partial => "list", :locals => {:trainings => @trainings} %>
+
+
+<script id="training-template" type="text/x-handlebars-template">
+    <fieldset>
+        <legend> <a class="show_link" href="/trainings/{{id}}">{{name}}</a> </legend>
+
+<p> Description: {{description}} </p>
+<p> Room: {{simroom}} </p>
+<p> Date: {{date}} </p>
+<p> Equipment: <a href="/equipment/{{equipment.id}}/reports">{{equipment.name}}</a> </p>
+<p> Created by: {{user.email}} </p>
+
+    </fieldset>
+</script>

@@ -1,6 +1,9 @@
 $(() => {
     bindTrainingClickEvents();
 });
+$(() => {
+    buildTrainingTemplates();
+});
 
 
 const bindTrainingClickEvents = () => {    
@@ -38,9 +41,10 @@ const bindTrainingClickEvents = () => {
             // Do I want to make a Training instance for this?
             success: function(training) {
                 let newTraining = new Training(training)
-                console.log(newTraining)
-                //$('ul').prepend(response)
-                //$('.back_to_trainings').remove()
+                let indexTraining = newTraining.renderIndexTraining()
+
+                $('ul').prepend(html)
+                $('.back_to_trainings').remove()
             }
         });
     });
@@ -59,6 +63,7 @@ const bindTrainingClickEvents = () => {
         $.get(`/trainings/${id}/next`).success(function(training) {
             let nextTraining = new Training(training)
             let TrainingHtml = nextTraining.formatShow()
+
             $('body').html(TrainingHtml)
         });
     });
@@ -74,6 +79,18 @@ const bindTrainingClickEvents = () => {
         this.date = training.date
         this.equipment = training.equipment
         this.user = training.user
+    }
+
+    const buildTrainingTemplates = () => {
+
+        Training.templateSource = $('#training-template').html();
+        Training.template = Handlebars.compile(Training.templateSource)
+    }
+ 
+ 
+
+    Training.prototype.renderIndexTraining = function() {
+
     }
 
     Training.prototype.formatShow = function() {
