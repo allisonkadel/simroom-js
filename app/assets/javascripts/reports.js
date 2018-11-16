@@ -54,7 +54,7 @@ const bindClickEvents = () => {
     $("a.load_reports").on('click',function(e){
         e.preventDefault();
 
-        $.get(`${this.href}.json`)
+        $.get(`${this.href}`, null, null, 'json')
         .success(reports => {
 
             $(`div.reports-${reports[0].equipment.id}`).html(`<a href='equipment/${reports[0].equipment.id}/reports/new'>Create New Report</a>`)
