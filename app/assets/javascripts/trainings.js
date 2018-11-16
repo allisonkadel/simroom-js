@@ -31,8 +31,10 @@ const bindTrainingClickEvents = () => {
             //         'user_id': 25
             //     } 
             // },
+
+            // how do I get the id of the training we just created?
+            // we need this to insert a link on the training title
             success: function(response) {
-                console.log(data)
                 $('ul').prepend(response)
                 $('.back_to_trainings').remove()
             }
