@@ -53,16 +53,16 @@ const bindTrainingClickEvents = () => {
     });
 
     $(document).on('click','.next-training', function(e) {
-        debugger
         let id = $(this).attr('data-id')
-        console.log(id)
-        $.get(`/trainings/${id}/next`).success(function(response) {
-            alert("it worked")
-            console.log(response)
+        $.get(`/trainings/${id}/next`).success(function(training) {
+            let nextTraining = new Training(training)
+            let TrainingHtml = nextTraining.formatShow()
+            $('body').html(TrainingHtml)
         });
     });
 
 }
+
 
     function Training(training) {
         this.id = training.id
@@ -75,8 +75,8 @@ const bindTrainingClickEvents = () => {
     }
 
     Training.prototype.formatShow = function() {
-        let currentUserRoute = $("#current_user")[0].href
-        let currentUser = /\d+$/.exec(currentUserRoute);
+        var currentUserRoute = $("#current_user")[0].href
+        var currentUser = /\d+$/.exec(currentUserRoute);
         let editButton = "";
         let cancelButton = "";
         // cancel button is broken - need to send authenticity token manually - is it safe?
@@ -109,12 +109,13 @@ const bindTrainingClickEvents = () => {
         
         </fieldset>
 
-        <a href="/trainings">Back To Trainings</a>
-        
-        ${editButton}
-        ${cancelButton}
+        <a href="/trainings">Back To Trainings</a><br>
+        <a href="/users/${this.user.id}" id="current_user">Back To Dashboard</a><br>
 
         <button class="next-training" data-id=${this.id}>Next Training</button>
+
+        ${editButton}
+        ${cancelButton}
        `
         return TrainingHtml;
     }
