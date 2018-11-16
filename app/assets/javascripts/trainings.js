@@ -45,7 +45,7 @@ const bindTrainingClickEvents = () => {
 
     $('.show_link').on('click', function(e) {
         e.preventDefault();
-        $.get(`${this.href}.json`).success(function(training) {
+        $.get(`${this.href}`, null, null, 'json').success(function(training) {
             let newTraining = new Training(training)
             let TrainingHtml = newTraining.formatShow()
             $('body').html(TrainingHtml)
