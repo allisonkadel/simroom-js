@@ -71,7 +71,7 @@ const bindTrainingClickEvents = () => {
         let currentUser = /\d+$/.exec(currentUserRoute);
         let editButton = "";
         let cancelButton = "";
-        // cancel button is broken - need to send authenticity token manually
+        // cancel button is broken - need to send authenticity token manually - is it safe?
         if(currentUser == this.user.id) {
             editButton = `<form class="button_to" method="get" action="/trainings/${this.id}/edit">
                                 <input class="back_to_trainings" value="Edit Training" type="submit"></form>`
@@ -100,11 +100,13 @@ const bindTrainingClickEvents = () => {
         </p>
         
         </fieldset>
+
+        <a href="/trainings">Back To Trainings</a>
         
         ${editButton}
         ${cancelButton}
-        
-        <a href="/trainings">Back To Trainings</a>
+
+        <button class="next-training">Next Training</button>
        `
         return TrainingHtml;
     }
