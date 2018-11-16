@@ -45867,3 +45867,1888 @@ Processing by StaticController#home as */*
 Completed 200 OK in 110ms (Views: 95.5ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/trainings" for 127.0.0.1 at 2018-11-16 04:39:06 -0800
+Processing by TrainingsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  Rendering trainings/index.html.erb within layouts/application
+  [1m[36mTraining Load (12.1ms)[0m  [1m[34mSELECT "trainings".* FROM "trainings"[0m
+  ↳ app/views/trainings/_list.html.erb:2
+  [1m[36mEquipment Load (0.3ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (49.8ms)
+  Rendered trainings/_training.html.erb (134.5ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (12.2ms)
+  Rendered trainings/_training.html.erb (13.4ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (75.1ms)
+  Rendered trainings/_training.html.erb (76.1ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (9.6ms)
+  Rendered trainings/_training.html.erb (10.6ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (4.2ms)
+  Rendered trainings/_training.html.erb (7.5ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (2.4ms)
+  Rendered trainings/_training.html.erb (3.3ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (8.7ms)
+  Rendered trainings/_training.html.erb (9.8ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (6.5ms)
+  Rendered trainings/_training.html.erb (9.6ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (12.4ms)
+  Rendered trainings/_training.html.erb (14.7ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (4.8ms)
+  Rendered trainings/_training.html.erb (5.8ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (8.9ms)
+  Rendered trainings/_training.html.erb (10.9ms)
+  [1m[36mEquipment Load (0.1ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (8.2ms)
+  Rendered trainings/_training.html.erb (14.2ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (8.1ms)
+  Rendered trainings/_training.html.erb (9.2ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (11.0ms)
+  Rendered trainings/_training.html.erb (14.1ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (7.3ms)
+  Rendered trainings/_training.html.erb (10.0ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (15.9ms)
+  Rendered trainings/_training.html.erb (17.0ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (7.4ms)
+  Rendered trainings/_training.html.erb (9.4ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (6.2ms)
+  Rendered trainings/_training.html.erb (8.2ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (11.9ms)
+  Rendered trainings/_training.html.erb (12.8ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (6.9ms)
+  Rendered trainings/_training.html.erb (8.5ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (5.8ms)
+  Rendered trainings/_training.html.erb (6.8ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (6.7ms)
+  Rendered trainings/_training.html.erb (12.9ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (4.8ms)
+  Rendered trainings/_training.html.erb (41.5ms)
+  [1m[36mCACHE Equipment Load (0.1ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (10.4ms)
+  Rendered trainings/_training.html.erb (12.1ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (7.4ms)
+  Rendered trainings/_training.html.erb (11.8ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (7.5ms)
+  Rendered trainings/_training.html.erb (8.4ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (10.1ms)
+  Rendered trainings/_training.html.erb (11.1ms)
+  Rendered trainings/_list.html.erb (659.6ms)
+  Rendered trainings/index.html.erb within layouts/application (788.7ms)
+Completed 200 OK in 10759ms (Views: 9752.8ms | ActiveRecord: 14.2ms)
+
+
+Started GET "/trainings/new" for 127.0.0.1 at 2018-11-16 04:39:26 -0800
+Processing by TrainingsController#new as */*
+  Rendering trainings/new.html.erb within layouts/application
+  [1m[36mEquipment Load (0.2ms)[0m  [1m[34mSELECT "equipment".* FROM "equipment"[0m
+  ↳ app/views/trainings/_form_attributes.html.erb:15
+  Rendered trainings/_form_attributes.html.erb (464.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  Rendered trainings/new.html.erb within layouts/application (499.2ms)
+Completed 200 OK in 1039ms (Views: 1000.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/trainings" for 127.0.0.1 at 2018-11-16 04:40:22 -0800
+Processing by TrainingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eZ5mtZaN3sP6HhcAI6b2g2MzeYduxtQoqR5vw4dMAsFfbwypl1ujidUEr7e4VuQ0QMIinvOYAiKDLwFuSNHNtg==", "training"=>{"name"=>"this nested ajax probably won't work", "description"=>"sdasd", "simroom"=>"1", "date"=>"2018-11-29", "equipment_id"=>"1", "user_id"=>"25"}, "commit"=>"Schedule Training"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trainings_controller.rb:14
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/trainings_controller.rb:14
+  [1m[36mEquipment Load (0.1ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/trainings_controller.rb:14
+  [1m[36mTraining Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "trainings" WHERE "trainings"."name" = ? LIMIT ?[0m  [["name", "this nested ajax probably won't work"], ["LIMIT", 1]]
+  ↳ app/controllers/trainings_controller.rb:14
+  [1m[36mTraining Create (0.4ms)[0m  [1m[32mINSERT INTO "trainings" ("name", "description", "date", "simroom", "user_id", "equipment_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "this nested ajax probably won't work"], ["description", "sdasd"], ["date", "2018-11-29"], ["simroom", "1"], ["user_id", 25], ["equipment_id", 1], ["created_at", "2018-11-16 12:40:22.323136"], ["updated_at", "2018-11-16 12:40:22.323136"]]
+  ↳ app/controllers/trainings_controller.rb:14
+  [1m[35m (156.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/trainings_controller.rb:14
+  Rendering trainings/show.html.erb
+  Rendered trainings/_attributes.html.erb (0.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  Rendered trainings/show.html.erb (24.3ms)
+Completed 200 OK in 445ms (Views: 78.2ms | ActiveRecord: 157.3ms)
+
+
+Started GET "/trainings" for 127.0.0.1 at 2018-11-16 04:40:35 -0800
+Processing by TrainingsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  Rendering trainings/index.html.erb within layouts/application
+  [1m[36mTraining Load (0.7ms)[0m  [1m[34mSELECT "trainings".* FROM "trainings"[0m
+  ↳ app/views/trainings/_list.html.erb:2
+  [1m[36mEquipment Load (0.1ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (36.0ms)
+  Rendered trainings/_training.html.erb (37.7ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (17.9ms)
+  Rendered trainings/_training.html.erb (21.6ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (17.0ms)
+  Rendered trainings/_training.html.erb (19.4ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (13.3ms)
+  Rendered trainings/_training.html.erb (21.0ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (16.5ms)
+  Rendered trainings/_training.html.erb (25.7ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (12.5ms)
+  Rendered trainings/_training.html.erb (15.2ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (20.2ms)
+  Rendered trainings/_training.html.erb (21.6ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (19.2ms)
+  Rendered trainings/_training.html.erb (21.6ms)
+  [1m[36mCACHE Equipment Load (0.1ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (16.1ms)
+  Rendered trainings/_training.html.erb (22.6ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (12.1ms)
+  Rendered trainings/_training.html.erb (16.4ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (20.2ms)
+  Rendered trainings/_training.html.erb (23.5ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (19.2ms)
+  Rendered trainings/_training.html.erb (21.9ms)
+  [1m[36mEquipment Load (0.1ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (13.7ms)
+  Rendered trainings/_training.html.erb (16.3ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (9.8ms)
+  Rendered trainings/_training.html.erb (24.6ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (22.8ms)
+  Rendered trainings/_training.html.erb (26.1ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (17.6ms)
+  Rendered trainings/_training.html.erb (31.6ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (15.4ms)
+  Rendered trainings/_training.html.erb (17.9ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (32.9ms)
+  Rendered trainings/_training.html.erb (46.0ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (15.7ms)
+  Rendered trainings/_training.html.erb (23.7ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (12.3ms)
+  Rendered trainings/_training.html.erb (14.9ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (13.3ms)
+  Rendered trainings/_training.html.erb (15.7ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (11.2ms)
+  Rendered trainings/_training.html.erb (13.8ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (15.3ms)
+  Rendered trainings/_training.html.erb (18.0ms)
+  [1m[36mCACHE Equipment Load (0.1ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (19.1ms)
+  Rendered trainings/_training.html.erb (21.6ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (13.9ms)
+  Rendered trainings/_training.html.erb (26.1ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (17.9ms)
+  Rendered trainings/_training.html.erb (26.9ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (9.7ms)
+  Rendered trainings/_training.html.erb (11.7ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (20.2ms)
+  Rendered trainings/_training.html.erb (23.0ms)
+  Rendered trainings/_list.html.erb (711.8ms)
+  Rendered trainings/index.html.erb within layouts/application (718.6ms)
+Completed 200 OK in 856ms (Views: 840.9ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/trainings" for 127.0.0.1 at 2018-11-16 04:54:51 -0800
+Processing by TrainingsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  Rendering trainings/index.html.erb within layouts/application
+  [1m[36mTraining Load (0.6ms)[0m  [1m[34mSELECT "trainings".* FROM "trainings"[0m
+  ↳ app/views/trainings/_list.html.erb:2
+  [1m[36mEquipment Load (0.3ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (4.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (19.0ms)
+  Rendered trainings/_training.html.erb (34.2ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (18.3ms)
+  Rendered trainings/_training.html.erb (22.6ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (11.3ms)
+  Rendered trainings/_training.html.erb (17.5ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (13.9ms)
+  Rendered trainings/_training.html.erb (15.5ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (19.2ms)
+  Rendered trainings/_training.html.erb (21.8ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (17.2ms)
+  Rendered trainings/_training.html.erb (25.6ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (20.0ms)
+  Rendered trainings/_training.html.erb (23.4ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (15.8ms)
+  Rendered trainings/_training.html.erb (20.5ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (16.9ms)
+  Rendered trainings/_training.html.erb (19.4ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (16.2ms)
+  Rendered trainings/_training.html.erb (18.4ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (11.4ms)
+  Rendered trainings/_training.html.erb (12.6ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (16.3ms)
+  Rendered trainings/_training.html.erb (20.2ms)
+  [1m[36mEquipment Load (0.1ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (9.2ms)
+  Rendered trainings/_training.html.erb (10.2ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (15.0ms)
+  Rendered trainings/_training.html.erb (17.6ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (9.9ms)
+  Rendered trainings/_training.html.erb (14.8ms)
+  [1m[36mCACHE Equipment Load (0.2ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (16.9ms)
+  Rendered trainings/_training.html.erb (19.5ms)
+  [1m[36mCACHE Equipment Load (0.1ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (21.2ms)
+  Rendered trainings/_training.html.erb (22.4ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (21.4ms)
+  Rendered trainings/_training.html.erb (24.3ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (16.8ms)
+  Rendered trainings/_training.html.erb (18.5ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (10.0ms)
+  Rendered trainings/_training.html.erb (11.1ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (14.0ms)
+  Rendered trainings/_training.html.erb (18.2ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (9.6ms)
+  Rendered trainings/_training.html.erb (11.9ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (14.1ms)
+  Rendered trainings/_training.html.erb (15.1ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (14.0ms)
+  Rendered trainings/_training.html.erb (15.2ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (8.4ms)
+  Rendered trainings/_training.html.erb (19.0ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (17.0ms)
+  Rendered trainings/_training.html.erb (19.4ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (11.4ms)
+  Rendered trainings/_training.html.erb (13.7ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (10.6ms)
+  Rendered trainings/_training.html.erb (13.1ms)
+  Rendered trainings/_list.html.erb (671.5ms)
+  Rendered trainings/index.html.erb within layouts/application (675.1ms)
+Completed 200 OK in 1147ms (Views: 1126.4ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/trainings/new" for 127.0.0.1 at 2018-11-16 04:54:54 -0800
+Processing by TrainingsController#new as */*
+  Rendering trainings/new.html.erb within layouts/application
+  [1m[36mEquipment Load (0.3ms)[0m  [1m[34mSELECT "equipment".* FROM "equipment"[0m
+  ↳ app/views/trainings/_form_attributes.html.erb:15
+  Rendered trainings/_form_attributes.html.erb (19.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  Rendered trainings/new.html.erb within layouts/application (49.8ms)
+Completed 200 OK in 221ms (Views: 196.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/trainings" for 127.0.0.1 at 2018-11-16 04:56:29 -0800
+Processing by TrainingsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kPJzkfA2KVGboHWe13SsE4jmBmWSjCVUtqgX4lXbwc22AxmN8eBUG7S6zSlMhL6kqxddfA/S816cmXlPmkYOug==", "training"=>{"name"=>"", "description"=>"", "simroom"=>"", "date"=>"", "equipment_id"=>"1", "user_id"=>"25"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trainings_controller.rb:14
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/trainings_controller.rb:14
+  [1m[36mEquipment Load (0.2ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/trainings_controller.rb:14
+  [1m[36mTraining Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "trainings" WHERE "trainings"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/trainings_controller.rb:14
+  [1m[35m (3.8ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/trainings_controller.rb:14
+Completed 500 Internal Server Error in 69ms (ActiveRecord: 4.5ms)
+
+
+  
+RuntimeError (<ActionController::Parameters {"utf8"=>"✓", "authenticity_token"=>"kPJzkfA2KVGboHWe13SsE4jmBmWSjCVUtqgX4lXbwc22AxmN8eBUG7S6zSlMhL6kqxddfA/S816cmXlPmkYOug==", "training"=><ActionController::Parameters {"name"=>"", "description"=>"", "simroom"=>"", "date"=>"", "equipment_id"=>"1", "user_id"=>"25"} permitted: false>, "controller"=>"trainings", "action"=>"create"} permitted: false>):
+  
+app/controllers/trainings_controller.rb:17:in `create'
+Started GET "/trainings" for 127.0.0.1 at 2018-11-16 04:56:33 -0800
+Processing by TrainingsController#index as HTML
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  Rendering trainings/index.html.erb within layouts/application
+  [1m[36mTraining Load (0.5ms)[0m  [1m[34mSELECT "trainings".* FROM "trainings"[0m
+  ↳ app/views/trainings/_list.html.erb:2
+  [1m[36mEquipment Load (0.1ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (13.1ms)
+  Rendered trainings/_training.html.erb (21.8ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (10.1ms)
+  Rendered trainings/_training.html.erb (15.6ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (8.8ms)
+  Rendered trainings/_training.html.erb (13.8ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (11.0ms)
+  Rendered trainings/_training.html.erb (14.6ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (14.2ms)
+  Rendered trainings/_training.html.erb (17.6ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (11.0ms)
+  Rendered trainings/_training.html.erb (13.4ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (9.5ms)
+  Rendered trainings/_training.html.erb (12.6ms)
+  [1m[36mCACHE Equipment Load (0.1ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (11.3ms)
+  Rendered trainings/_training.html.erb (14.1ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (13.1ms)
+  Rendered trainings/_training.html.erb (16.0ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (17.3ms)
+  Rendered trainings/_training.html.erb (20.1ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (11.0ms)
+  Rendered trainings/_training.html.erb (16.7ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (9.8ms)
+  Rendered trainings/_training.html.erb (15.4ms)
+  [1m[36mEquipment Load (0.1ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (9.1ms)
+  Rendered trainings/_training.html.erb (10.0ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (18.5ms)
+  Rendered trainings/_training.html.erb (19.6ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (12.7ms)
+  Rendered trainings/_training.html.erb (17.4ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (12.3ms)
+  Rendered trainings/_training.html.erb (13.4ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (10.7ms)
+  Rendered trainings/_training.html.erb (14.2ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (9.9ms)
+  Rendered trainings/_training.html.erb (10.8ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (2.7ms)
+  Rendered trainings/_training.html.erb (3.6ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (2.1ms)
+  Rendered trainings/_training.html.erb (2.9ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (3.1ms)
+  Rendered trainings/_training.html.erb (7.7ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (4.6ms)
+  Rendered trainings/_training.html.erb (5.6ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (4.1ms)
+  Rendered trainings/_training.html.erb (5.2ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (11.3ms)
+  Rendered trainings/_training.html.erb (13.4ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (14.8ms)
+  Rendered trainings/_training.html.erb (15.9ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (7.0ms)
+  Rendered trainings/_training.html.erb (15.5ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (12.8ms)
+  Rendered trainings/_training.html.erb (15.3ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (8.2ms)
+  Rendered trainings/_training.html.erb (10.8ms)
+  Rendered trainings/_list.html.erb (448.5ms)
+  Rendered trainings/index.html.erb within layouts/application (452.5ms)
+Completed 200 OK in 562ms (Views: 549.5ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/trainings/new" for 127.0.0.1 at 2018-11-16 04:56:36 -0800
+Processing by TrainingsController#new as */*
+  Rendering trainings/new.html.erb within layouts/application
+  [1m[36mEquipment Load (0.3ms)[0m  [1m[34mSELECT "equipment".* FROM "equipment"[0m
+  ↳ app/views/trainings/_form_attributes.html.erb:15
+  Rendered trainings/_form_attributes.html.erb (42.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  Rendered trainings/new.html.erb within layouts/application (59.0ms)
+Completed 200 OK in 155ms (Views: 137.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/trainings" for 127.0.0.1 at 2018-11-16 04:56:40 -0800
+Processing by TrainingsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wwXp6afu0F2qcfUwy+7DJQ9gHUMYoIGlkgN2e9Zmzw3l9IP1pjitF4VrTYdQHtGSLJFGWoX+V6+4MhjWGfsAeg==", "training"=>{"name"=>"", "description"=>"", "simroom"=>"", "date"=>"", "equipment_id"=>"1", "user_id"=>"25"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trainings_controller.rb:14
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/trainings_controller.rb:14
+  [1m[36mEquipment Load (0.1ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/trainings_controller.rb:14
+  [1m[36mTraining Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "trainings" WHERE "trainings"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/trainings_controller.rb:14
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/trainings_controller.rb:14
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 0.6ms)
+
+
+  
+RuntimeError (<ActionController::Parameters {"utf8"=>"✓", "authenticity_token"=>"wwXp6afu0F2qcfUwy+7DJQ9gHUMYoIGlkgN2e9Zmzw3l9IP1pjitF4VrTYdQHtGSLJFGWoX+V6+4MhjWGfsAeg==", "training"=><ActionController::Parameters {"name"=>"", "description"=>"", "simroom"=>"", "date"=>"", "equipment_id"=>"1", "user_id"=>"25"} permitted: false>, "controller"=>"trainings", "action"=>"create"} permitted: false>):
+  
+app/controllers/trainings_controller.rb:17:in `create'
+Started GET "/trainings" for 127.0.0.1 at 2018-11-16 04:57:56 -0800
+Processing by TrainingsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  Rendering trainings/index.html.erb within layouts/application
+  [1m[36mTraining Load (0.5ms)[0m  [1m[34mSELECT "trainings".* FROM "trainings"[0m
+  ↳ app/views/trainings/_list.html.erb:2
+  [1m[36mEquipment Load (0.2ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (47.4ms)
+  Rendered trainings/_training.html.erb (56.1ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (11.6ms)
+  Rendered trainings/_training.html.erb (13.6ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (10.4ms)
+  Rendered trainings/_training.html.erb (21.3ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (21.1ms)
+  Rendered trainings/_training.html.erb (22.2ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (12.1ms)
+  Rendered trainings/_training.html.erb (14.6ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (16.9ms)
+  Rendered trainings/_training.html.erb (18.9ms)
+  [1m[36mCACHE Equipment Load (0.1ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (17.1ms)
+  Rendered trainings/_training.html.erb (21.5ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (13.1ms)
+  Rendered trainings/_training.html.erb (14.0ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (11.7ms)
+  Rendered trainings/_training.html.erb (12.9ms)
+  [1m[36mCACHE Equipment Load (0.1ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (12.0ms)
+  Rendered trainings/_training.html.erb (12.9ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (9.5ms)
+  Rendered trainings/_training.html.erb (17.4ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (7.7ms)
+  Rendered trainings/_training.html.erb (8.8ms)
+  [1m[36mEquipment Load (0.1ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (10.4ms)
+  Rendered trainings/_training.html.erb (14.8ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (18.8ms)
+  Rendered trainings/_training.html.erb (19.8ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (12.0ms)
+  Rendered trainings/_training.html.erb (12.9ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (16.0ms)
+  Rendered trainings/_training.html.erb (17.2ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (9.9ms)
+  Rendered trainings/_training.html.erb (13.7ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (11.0ms)
+  Rendered trainings/_training.html.erb (14.0ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (7.2ms)
+  Rendered trainings/_training.html.erb (9.2ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (13.4ms)
+  Rendered trainings/_training.html.erb (23.7ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (6.1ms)
+  Rendered trainings/_training.html.erb (7.0ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (16.2ms)
+  Rendered trainings/_training.html.erb (18.2ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (6.9ms)
+  Rendered trainings/_training.html.erb (10.6ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (6.6ms)
+  Rendered trainings/_training.html.erb (13.5ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (7.9ms)
+  Rendered trainings/_training.html.erb (8.8ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (6.0ms)
+  Rendered trainings/_training.html.erb (12.8ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (5.4ms)
+  Rendered trainings/_training.html.erb (18.7ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (12.0ms)
+  Rendered trainings/_training.html.erb (14.0ms)
+  Rendered trainings/_list.html.erb (530.2ms)
+  Rendered trainings/index.html.erb within layouts/application (541.9ms)
+Completed 200 OK in 825ms (Views: 808.1ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/trainings/new" for 127.0.0.1 at 2018-11-16 04:58:00 -0800
+Processing by TrainingsController#new as */*
+  Rendering trainings/new.html.erb within layouts/application
+  [1m[36mEquipment Load (0.5ms)[0m  [1m[34mSELECT "equipment".* FROM "equipment"[0m
+  ↳ app/views/trainings/_form_attributes.html.erb:15
+  Rendered trainings/_form_attributes.html.erb (12.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  Rendered trainings/new.html.erb within layouts/application (27.1ms)
+Completed 200 OK in 185ms (Views: 171.7ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/trainings" for 127.0.0.1 at 2018-11-16 04:58:14 -0800
+Processing by TrainingsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VHrpoJVD666mcOL9nMbGBZk+fT6SL1JIdLu1tB6hGMByi4O8lJWW5IlqWkoHNtSyus8mJw9xhEJeitsZ0TzXtw==", "training"=>{"name"=>"testing nested ajax", "description"=>"", "simroom"=>"", "date"=>"", "equipment_id"=>"1", "user_id"=>"25"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trainings_controller.rb:14
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/trainings_controller.rb:14
+  [1m[36mEquipment Load (0.2ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/trainings_controller.rb:14
+  [1m[36mTraining Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "trainings" WHERE "trainings"."name" = ? LIMIT ?[0m  [["name", "testing nested ajax"], ["LIMIT", 1]]
+  ↳ app/controllers/trainings_controller.rb:14
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/trainings_controller.rb:14
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.7ms)
+
+
+  
+RuntimeError (<ActionController::Parameters {"utf8"=>"✓", "authenticity_token"=>"VHrpoJVD666mcOL9nMbGBZk+fT6SL1JIdLu1tB6hGMByi4O8lJWW5IlqWkoHNtSyus8mJw9xhEJeitsZ0TzXtw==", "training"=><ActionController::Parameters {"name"=>"testing nested ajax", "description"=>"", "simroom"=>"", "date"=>"", "equipment_id"=>"1", "user_id"=>"25"} permitted: false>, "controller"=>"trainings", "action"=>"create"} permitted: false>):
+  
+app/controllers/trainings_controller.rb:17:in `create'
+Started GET "/trainings" for 127.0.0.1 at 2018-11-16 05:06:10 -0800
+Processing by TrainingsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  Rendering trainings/index.html.erb within layouts/application
+  [1m[36mTraining Load (0.4ms)[0m  [1m[34mSELECT "trainings".* FROM "trainings"[0m
+  ↳ app/views/trainings/_list.html.erb:2
+  [1m[36mEquipment Load (0.2ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (19.6ms)
+  Rendered trainings/_training.html.erb (22.4ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (10.3ms)
+  Rendered trainings/_training.html.erb (14.0ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (12.1ms)
+  Rendered trainings/_training.html.erb (18.9ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (14.4ms)
+  Rendered trainings/_training.html.erb (16.5ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (13.6ms)
+  Rendered trainings/_training.html.erb (15.1ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (5.3ms)
+  Rendered trainings/_training.html.erb (12.6ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (11.9ms)
+  Rendered trainings/_training.html.erb (14.2ms)
+  [1m[36mCACHE Equipment Load (0.1ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (16.2ms)
+  Rendered trainings/_training.html.erb (20.2ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (16.1ms)
+  Rendered trainings/_training.html.erb (17.4ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (16.9ms)
+  Rendered trainings/_training.html.erb (17.8ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (13.4ms)
+  Rendered trainings/_training.html.erb (18.8ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (13.3ms)
+  Rendered trainings/_training.html.erb (15.6ms)
+  [1m[36mEquipment Load (0.2ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (17.7ms)
+  Rendered trainings/_training.html.erb (18.8ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (10.0ms)
+  Rendered trainings/_training.html.erb (14.8ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (6.8ms)
+  Rendered trainings/_training.html.erb (13.8ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (10.7ms)
+  Rendered trainings/_training.html.erb (13.2ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (6.9ms)
+  Rendered trainings/_training.html.erb (8.9ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (5.6ms)
+  Rendered trainings/_training.html.erb (7.6ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (14.7ms)
+  Rendered trainings/_training.html.erb (17.7ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (17.4ms)
+  Rendered trainings/_training.html.erb (19.8ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (9.2ms)
+  Rendered trainings/_training.html.erb (11.0ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (7.9ms)
+  Rendered trainings/_training.html.erb (8.9ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (11.1ms)
+  Rendered trainings/_training.html.erb (13.4ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (7.6ms)
+  Rendered trainings/_training.html.erb (9.1ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (5.5ms)
+  Rendered trainings/_training.html.erb (7.6ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (12.4ms)
+  Rendered trainings/_training.html.erb (13.4ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (7.0ms)
+  Rendered trainings/_training.html.erb (11.2ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (13.1ms)
+  Rendered trainings/_training.html.erb (15.1ms)
+  Rendered trainings/_list.html.erb (529.2ms)
+  Rendered trainings/index.html.erb within layouts/application (538.7ms)
+Completed 200 OK in 870ms (Views: 856.0ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/trainings/new" for 127.0.0.1 at 2018-11-16 05:06:15 -0800
+Processing by TrainingsController#new as */*
+  Rendering trainings/new.html.erb within layouts/application
+  [1m[36mEquipment Load (0.2ms)[0m  [1m[34mSELECT "equipment".* FROM "equipment"[0m
+  ↳ app/views/trainings/_form_attributes.html.erb:15
+  Rendered trainings/_form_attributes.html.erb (6.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  Rendered trainings/new.html.erb within layouts/application (20.1ms)
+Completed 200 OK in 158ms (Views: 137.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/trainings" for 127.0.0.1 at 2018-11-16 05:06:19 -0800
+Processing by TrainingsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OYwGuH/GcF6Vhm/87Mn+thOh3D/gXY5Wso1J+k9Ln1cffWykfhANFLqc10t3OewBMFCHJn0DWFyYvCdXgNZQIA==", "training"=>{"name"=>"", "description"=>"", "simroom"=>"", "date"=>"", "equipment_id"=>"1", "user_id"=>"25"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trainings_controller.rb:14
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/trainings_controller.rb:14
+  [1m[36mEquipment Load (0.2ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/trainings_controller.rb:14
+  [1m[36mTraining Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "trainings" WHERE "trainings"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/trainings_controller.rb:14
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/trainings_controller.rb:14
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.6ms)
+
+
+  
+RuntimeError (<ActionController::Parameters {"utf8"=>"✓", "authenticity_token"=>"OYwGuH/GcF6Vhm/87Mn+thOh3D/gXY5Wso1J+k9Ln1cffWykfhANFLqc10t3OewBMFCHJn0DWFyYvCdXgNZQIA==", "training"=><ActionController::Parameters {"name"=>"", "description"=>"", "simroom"=>"", "date"=>"", "equipment_id"=>"1", "user_id"=>"25"} permitted: false>, "controller"=>"trainings", "action"=>"create"} permitted: false>):
+  
+app/controllers/trainings_controller.rb:17:in `create'
+Started GET "/trainings" for 127.0.0.1 at 2018-11-16 05:07:05 -0800
+Processing by TrainingsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  Rendering trainings/index.html.erb within layouts/application
+  [1m[36mTraining Load (0.7ms)[0m  [1m[34mSELECT "trainings".* FROM "trainings"[0m
+  ↳ app/views/trainings/_list.html.erb:2
+  [1m[36mEquipment Load (0.1ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (42.1ms)
+  Rendered trainings/_training.html.erb (55.4ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (12.3ms)
+  Rendered trainings/_training.html.erb (22.2ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (14.5ms)
+  Rendered trainings/_training.html.erb (16.8ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (17.5ms)
+  Rendered trainings/_training.html.erb (19.3ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (16.5ms)
+  Rendered trainings/_training.html.erb (23.0ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (12.9ms)
+  Rendered trainings/_training.html.erb (17.1ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (16.6ms)
+  Rendered trainings/_training.html.erb (18.9ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (20.1ms)
+  Rendered trainings/_training.html.erb (21.9ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (10.7ms)
+  Rendered trainings/_training.html.erb (19.6ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (16.0ms)
+  Rendered trainings/_training.html.erb (17.1ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (17.1ms)
+  Rendered trainings/_training.html.erb (20.8ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (12.5ms)
+  Rendered trainings/_training.html.erb (16.7ms)
+  [1m[36mEquipment Load (0.2ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (16.4ms)
+  Rendered trainings/_training.html.erb (17.5ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (11.9ms)
+  Rendered trainings/_training.html.erb (14.1ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (6.6ms)
+  Rendered trainings/_training.html.erb (13.7ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (7.4ms)
+  Rendered trainings/_training.html.erb (10.7ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (13.1ms)
+  Rendered trainings/_training.html.erb (15.0ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (7.8ms)
+  Rendered trainings/_training.html.erb (10.8ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (15.4ms)
+  Rendered trainings/_training.html.erb (22.5ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (10.4ms)
+  Rendered trainings/_training.html.erb (12.6ms)
+  [1m[36mCACHE Equipment Load (0.1ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (10.6ms)
+  Rendered trainings/_training.html.erb (17.6ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (19.3ms)
+  Rendered trainings/_training.html.erb (20.6ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (13.1ms)
+  Rendered trainings/_training.html.erb (16.5ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (13.0ms)
+  Rendered trainings/_training.html.erb (22.3ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (20.9ms)
+  Rendered trainings/_training.html.erb (23.1ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (16.3ms)
+  Rendered trainings/_training.html.erb (24.4ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (13.8ms)
+  Rendered trainings/_training.html.erb (18.8ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (14.8ms)
+  Rendered trainings/_training.html.erb (17.5ms)
+  Rendered trainings/_list.html.erb (602.8ms)
+  Rendered trainings/index.html.erb within layouts/application (605.3ms)
+Completed 200 OK in 980ms (Views: 972.3ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/trainings/new" for 127.0.0.1 at 2018-11-16 05:07:09 -0800
+Processing by TrainingsController#new as */*
+  Rendering trainings/new.html.erb within layouts/application
+  [1m[36mEquipment Load (0.4ms)[0m  [1m[34mSELECT "equipment".* FROM "equipment"[0m
+  ↳ app/views/trainings/_form_attributes.html.erb:15
+  Rendered trainings/_form_attributes.html.erb (19.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  Rendered trainings/new.html.erb within layouts/application (61.5ms)
+Completed 200 OK in 222ms (Views: 196.8ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/trainings" for 127.0.0.1 at 2018-11-16 05:07:13 -0800
+Processing by TrainingsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6eYb55JMK2eqpPrTLXqq9jC1GEFTPlVEABUNh2q7ISHPF3H7k5pWLYW+QmS2irhBE0RDWM5gg04qJGMqpSbuVg==", "training"=>{"name"=>"", "description"=>"", "simroom"=>"", "date"=>"", "equipment_id"=>"1", "user_id"=>"25"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trainings_controller.rb:14
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/trainings_controller.rb:14
+  [1m[36mEquipment Load (0.1ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/trainings_controller.rb:14
+  [1m[36mTraining Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "trainings" WHERE "trainings"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/trainings_controller.rb:14
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/trainings_controller.rb:14
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 0.8ms)
+
+
+  
+RuntimeError (<ActionController::Parameters {"utf8"=>"✓", "authenticity_token"=>"6eYb55JMK2eqpPrTLXqq9jC1GEFTPlVEABUNh2q7ISHPF3H7k5pWLYW+QmS2irhBE0RDWM5gg04qJGMqpSbuVg==", "training"=><ActionController::Parameters {"name"=>"", "description"=>"", "simroom"=>"", "date"=>"", "equipment_id"=>"1", "user_id"=>"25"} permitted: false>, "controller"=>"trainings", "action"=>"create"} permitted: false>):
+  
+app/controllers/trainings_controller.rb:17:in `create'
+Started GET "/trainings" for 127.0.0.1 at 2018-11-16 05:07:22 -0800
+Processing by TrainingsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  Rendering trainings/index.html.erb within layouts/application
+  [1m[36mTraining Load (0.5ms)[0m  [1m[34mSELECT "trainings".* FROM "trainings"[0m
+  ↳ app/views/trainings/_list.html.erb:2
+  [1m[36mEquipment Load (0.1ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (13.5ms)
+  Rendered trainings/_training.html.erb (20.0ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (12.7ms)
+  Rendered trainings/_training.html.erb (19.2ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (17.6ms)
+  Rendered trainings/_training.html.erb (21.4ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (13.7ms)
+  Rendered trainings/_training.html.erb (14.7ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (13.2ms)
+  Rendered trainings/_training.html.erb (17.7ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (8.4ms)
+  Rendered trainings/_training.html.erb (9.5ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (15.4ms)
+  Rendered trainings/_training.html.erb (17.4ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (12.3ms)
+  Rendered trainings/_training.html.erb (13.8ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (12.6ms)
+  Rendered trainings/_training.html.erb (19.4ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (9.6ms)
+  Rendered trainings/_training.html.erb (15.5ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (8.3ms)
+  Rendered trainings/_training.html.erb (10.2ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (5.6ms)
+  Rendered trainings/_training.html.erb (7.6ms)
+  [1m[36mEquipment Load (0.1ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (9.9ms)
+  Rendered trainings/_training.html.erb (12.2ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (8.2ms)
+  Rendered trainings/_training.html.erb (10.4ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (7.4ms)
+  Rendered trainings/_training.html.erb (8.5ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (6.4ms)
+  Rendered trainings/_training.html.erb (7.4ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (6.9ms)
+  Rendered trainings/_training.html.erb (9.2ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (11.8ms)
+  Rendered trainings/_training.html.erb (12.7ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (13.0ms)
+  Rendered trainings/_training.html.erb (15.7ms)
+  [1m[36mCACHE Equipment Load (0.1ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (17.8ms)
+  Rendered trainings/_training.html.erb (19.7ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (10.7ms)
+  Rendered trainings/_training.html.erb (13.3ms)
+  [1m[36mCACHE Equipment Load (0.1ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (8.3ms)
+  Rendered trainings/_training.html.erb (9.5ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (6.8ms)
+  Rendered trainings/_training.html.erb (11.2ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (7.3ms)
+  Rendered trainings/_training.html.erb (8.9ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (18.0ms)
+  Rendered trainings/_training.html.erb (23.2ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (11.8ms)
+  Rendered trainings/_training.html.erb (14.0ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (14.4ms)
+  Rendered trainings/_training.html.erb (16.0ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (8.9ms)
+  Rendered trainings/_training.html.erb (9.9ms)
+  Rendered trainings/_list.html.erb (489.8ms)
+  Rendered trainings/index.html.erb within layouts/application (496.7ms)
+Completed 200 OK in 582ms (Views: 569.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/trainings/new" for 127.0.0.1 at 2018-11-16 05:07:25 -0800
+Processing by TrainingsController#new as */*
+  Rendering trainings/new.html.erb within layouts/application
+  [1m[36mEquipment Load (1.6ms)[0m  [1m[34mSELECT "equipment".* FROM "equipment"[0m
+  ↳ app/views/trainings/_form_attributes.html.erb:15
+  Rendered trainings/_form_attributes.html.erb (45.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  Rendered trainings/new.html.erb within layouts/application (62.9ms)
+Completed 200 OK in 184ms (Views: 168.7ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/trainings" for 127.0.0.1 at 2018-11-16 05:07:40 -0800
+Processing by TrainingsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vnfYXJF1IlVNe7WW40f9/yLPYNpgLnY0cYCj3rcAo62YhrJAkKNfH2JhDSF4t+9IAT47w/1woD5bsc1zeJ1s2g==", "training"=>{"name"=>"we shall see", "description"=>"if this works", "simroom"=>"room 7", "date"=>"2018-11-28", "equipment_id"=>"1", "user_id"=>"25"}}
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trainings_controller.rb:14
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/trainings_controller.rb:14
+  [1m[36mEquipment Load (0.3ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/trainings_controller.rb:14
+  [1m[36mTraining Exists (2.8ms)[0m  [1m[34mSELECT  1 AS one FROM "trainings" WHERE "trainings"."name" = ? LIMIT ?[0m  [["name", "we shall see"], ["LIMIT", 1]]
+  ↳ app/controllers/trainings_controller.rb:14
+  [1m[36mTraining Create (7.3ms)[0m  [1m[32mINSERT INTO "trainings" ("name", "description", "date", "simroom", "user_id", "equipment_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "we shall see"], ["description", "if this works"], ["date", "2018-11-28"], ["simroom", "room 7"], ["user_id", 25], ["equipment_id", 1], ["created_at", "2018-11-16 13:07:40.092549"], ["updated_at", "2018-11-16 13:07:40.092549"]]
+  ↳ app/controllers/trainings_controller.rb:14
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/trainings_controller.rb:14
+  Rendering trainings/show.html.erb
+  Rendered trainings/_attributes.html.erb (2.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  Rendered trainings/show.html.erb (23.7ms)
+Completed 200 OK in 97ms (Views: 42.9ms | ActiveRecord: 23.2ms)
+
+
+Started GET "/trainings" for 127.0.0.1 at 2018-11-16 05:09:27 -0800
+Processing by TrainingsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  Rendering trainings/index.html.erb within layouts/application
+  [1m[36mTraining Load (0.7ms)[0m  [1m[34mSELECT "trainings".* FROM "trainings"[0m
+  ↳ app/views/trainings/_list.html.erb:2
+  [1m[36mEquipment Load (0.2ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (23.3ms)
+  Rendered trainings/_training.html.erb (26.4ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (15.4ms)
+  Rendered trainings/_training.html.erb (17.7ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (14.9ms)
+  Rendered trainings/_training.html.erb (16.0ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (15.0ms)
+  Rendered trainings/_training.html.erb (16.4ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (12.8ms)
+  Rendered trainings/_training.html.erb (16.5ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (15.8ms)
+  Rendered trainings/_training.html.erb (18.2ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (13.3ms)
+  Rendered trainings/_training.html.erb (16.6ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (12.2ms)
+  Rendered trainings/_training.html.erb (13.1ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (18.8ms)
+  Rendered trainings/_training.html.erb (19.8ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (18.5ms)
+  Rendered trainings/_training.html.erb (21.2ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (11.4ms)
+  Rendered trainings/_training.html.erb (13.6ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (8.2ms)
+  Rendered trainings/_training.html.erb (21.1ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (10.2ms)
+  Rendered trainings/_training.html.erb (16.7ms)
+  [1m[36mEquipment Load (0.2ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (12.6ms)
+  Rendered trainings/_training.html.erb (20.6ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (18.3ms)
+  Rendered trainings/_training.html.erb (19.6ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (10.4ms)
+  Rendered trainings/_training.html.erb (16.1ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (13.6ms)
+  Rendered trainings/_training.html.erb (17.3ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (18.3ms)
+  Rendered trainings/_training.html.erb (19.4ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (11.7ms)
+  Rendered trainings/_training.html.erb (18.2ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (11.7ms)
+  Rendered trainings/_training.html.erb (16.7ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (17.8ms)
+  Rendered trainings/_training.html.erb (21.2ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (13.5ms)
+  Rendered trainings/_training.html.erb (19.1ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (14.4ms)
+  Rendered trainings/_training.html.erb (19.1ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (18.4ms)
+  Rendered trainings/_training.html.erb (19.4ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (14.0ms)
+  Rendered trainings/_training.html.erb (19.7ms)
+  [1m[36mCACHE Equipment Load (0.2ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (9.1ms)
+  Rendered trainings/_training.html.erb (16.5ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (16.1ms)
+  Rendered trainings/_training.html.erb (17.3ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (10.6ms)
+  Rendered trainings/_training.html.erb (18.8ms)
+  [1m[36mCACHE Equipment Load (0.0ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/views/trainings/_attributes.html.erb:14
+  Rendered trainings/_attributes.html.erb (10.1ms)
+  Rendered trainings/_training.html.erb (12.3ms)
+  Rendered trainings/_list.html.erb (614.7ms)
+  Rendered trainings/index.html.erb within layouts/application (618.1ms)
+Completed 200 OK in 935ms (Views: 923.5ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/trainings/new" for 127.0.0.1 at 2018-11-16 05:09:31 -0800
+Processing by TrainingsController#new as */*
+  Rendering trainings/new.html.erb within layouts/application
+  [1m[36mEquipment Load (0.2ms)[0m  [1m[34mSELECT "equipment".* FROM "equipment"[0m
+  ↳ app/views/trainings/_form_attributes.html.erb:15
+  Rendered trainings/_form_attributes.html.erb (6.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  Rendered trainings/new.html.erb within layouts/application (60.8ms)
+Completed 200 OK in 194ms (Views: 175.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/trainings" for 127.0.0.1 at 2018-11-16 05:09:43 -0800
+Processing by TrainingsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5d7fbFVecxzl4HAzxAYs/Ymhz9i4iNPa+ltfh/Vfy6HDL7VwVIgOVsr6yIRf9j5KqlCUwSXWBdDQajEqOsIE1g==", "training"=>{"name"=>"another try", "description"=>"skjlk", "simroom"=>"1", "date"=>"2018-11-29", "equipment_id"=>"1", "user_id"=>"25"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trainings_controller.rb:14
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/trainings_controller.rb:14
+  [1m[36mEquipment Load (0.2ms)[0m  [1m[34mSELECT  "equipment".* FROM "equipment" WHERE "equipment"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/trainings_controller.rb:14
+  [1m[36mTraining Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "trainings" WHERE "trainings"."name" = ? LIMIT ?[0m  [["name", "another try"], ["LIMIT", 1]]
+  ↳ app/controllers/trainings_controller.rb:14
+  [1m[36mTraining Create (6.7ms)[0m  [1m[32mINSERT INTO "trainings" ("name", "description", "date", "simroom", "user_id", "equipment_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "another try"], ["description", "skjlk"], ["date", "2018-11-29"], ["simroom", "1"], ["user_id", 25], ["equipment_id", 1], ["created_at", "2018-11-16 13:09:43.387121"], ["updated_at", "2018-11-16 13:09:43.387121"]]
+  ↳ app/controllers/trainings_controller.rb:14
+  [1m[35m (6.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/trainings_controller.rb:14
+  Rendering trainings/show.html.erb
+  Rendered trainings/_attributes.html.erb (2.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  Rendered trainings/show.html.erb (21.0ms)
+Completed 200 OK in 86ms (Views: 37.7ms | ActiveRecord: 13.8ms)
+
+

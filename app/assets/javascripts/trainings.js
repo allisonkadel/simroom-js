@@ -13,7 +13,8 @@ const bindTrainingClickEvents = () => {
         });
     });
 
-    $("#new_training").on('submit',function(e) {
+    $(document).on('submit', '#new_training',function(e) {
+        alert("this worked")
         e.preventDefault();
         $.ajax({
             type: "POST",
@@ -31,6 +32,7 @@ const bindTrainingClickEvents = () => {
             //     } 
             // },
             success: function(response) {
+                console.log(data)
                 $('ul').prepend(response)
                 $('.back_to_trainings').remove()
             }
