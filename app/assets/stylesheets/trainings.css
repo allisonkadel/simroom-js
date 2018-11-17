@@ -37,17 +37,20 @@ a:hover {
     color: grey
 }
 
-button {
-    background-color: #4CAF50; /* Green */
+button:hover, input[type=submit]:hover {
+    color: #f44336;
+}
+
+button, input[type=submit] {
+    background-color: grey;
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 14px 25px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
 }
-
 
 
 /* a.whatever {
