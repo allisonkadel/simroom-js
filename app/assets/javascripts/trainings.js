@@ -43,7 +43,7 @@ const bindTrainingClickEvents = () => {
                 let newTraining = new Training(training)
                 let indexTraining = newTraining.renderIndexTraining()
 
-                $('ul').prepend(html)
+                $('ul').prepend(indexTraining)
                 $('.back_to_trainings').remove()
             }
         });
@@ -90,7 +90,7 @@ const bindTrainingClickEvents = () => {
  
 
     Training.prototype.renderIndexTraining = function() {
-
+        return Training.template(this)
     }
 
     Training.prototype.formatShow = function() {
