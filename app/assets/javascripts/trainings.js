@@ -54,7 +54,9 @@ const bindTrainingClickEvents = () => {
         $.get(`${this.href}`, null, null, 'json').success(function(training) {
             let newTraining = new Training(training)
             let TrainingHtml = newTraining.renderShowTraining()
-            $('body').html(TrainingHtml)
+            let buttonHtml = newTraining.formatShowButtons()
+            $('body').html(TrainingHtml + buttonHtml)
+
         });
     });
 
@@ -63,8 +65,8 @@ const bindTrainingClickEvents = () => {
         $.get(`/trainings/${id}/next`).success(function(training) {
             let nextTraining = new Training(training)
             let TrainingHtml = nextTraining.renderShowTraining()
-
-            $('body').html(TrainingHtml)
+            let buttonHtml = nextTraining.formatShowButtons()
+            $('body').html(TrainingHtml + buttonHtml)
         });
     });
 
@@ -98,7 +100,7 @@ const bindTrainingClickEvents = () => {
         return Training.showTemplate(this)
     }
 
-    Training.prototype.formatShow = function() {
+    Training.prototype.formatShowButtons = function() {
         var currentUserRoute = $("#current_user")[0].href
         var currentUser = /\d+$/.exec(currentUserRoute);
         let editButton = "";
@@ -111,37 +113,35 @@ const bindTrainingClickEvents = () => {
                                 <input class="back_to_trainings" value="Cancel Training" type="submit">
                                 <input name="_method" value="delete" type="hidden"></form>`
         }
-        let TrainingHtml = `
-        <fieldset>
-        <legend> ${this.name} </legend>
+        return `${editButton}${cancelButton}`;
+
+        // let TrainingHtml = `
+        // <fieldset>
+        // <legend> ${this.name} </legend>
         
-        <p>
-        Description: ${this.description}
-        </p>
-        <p>
-        Room: ${this.simroom}
-        </p>
-        <p>
-        Date: ${this.date}
-        </p>
-        <p>
-        Equipment: <a href="/equipment/${this.equipment.id}/reports">${this.equipment.name}</a>
-        </p>
-        <p>
-        Created by: ${this.user.email}
-        </p>
+        // <p>
+        // Description: ${this.description}
+        // </p>
+        // <p>
+        // Room: ${this.simroom}
+        // </p>
+        // <p>
+        // Date: ${this.date}
+        // </p>
+        // <p>
+        // Equipment: <a href="/equipment/${this.equipment.id}/reports">${this.equipment.name}</a>
+        // </p>
+        // <p>
+        // Created by: ${this.user.email}
+        // </p>
         
-        </fieldset>
+        // </fieldset>
 
-        <a href="/trainings">Back To Trainings</a><br>
-        <a href="/users/${this.user.id}" id="current_user">Back To Dashboard</a><br>
+        // <a href="/trainings">Back To Trainings</a><br>
+        // <a href="/users/${this.user.id}" id="current_user">Back To Dashboard</a><br>
 
-        <button class="next-training" data-id=${this.id}>Next Training</button>
+        // <button class="next-training" data-id=${this.id}>Next Training</button>
 
-        ${editButton}
-        ${cancelButton}
-       `
-        return TrainingHtml;
     }
 
 
