@@ -59,35 +59,35 @@ const buildTrainingTemplates = () => {
     Training.showTemplate = Handlebars.compile(Training.showTemplateSource)
 }
 
-    class Training {
-        constructor(training) {
-            this.id = training.id
-            this.name = training.name
-            this.description = training.description
-            this.simroom = training.simroom
-            this.date = training.date
-            this.equipment = training.equipment
-            this.user = training.user
+class Training {
+    constructor(training) {
+        this.id = training.id
+        this.name = training.name
+        this.description = training.description
+        this.simroom = training.simroom
+        this.date = training.date
+        this.equipment = training.equipment
+        this.user = training.user
+    }
+    renderIndexTraining() {
+        return Training.indexTemplate(this);
+    }
+    renderShowTraining() {
+        return Training.showTemplate(this);
+    }
+    formatShowButtons() {
+        var currentUserRoute = $("#current_user")[0].href
+        var currentUser = /\d+$/.exec(currentUserRoute);
+        let editButton = "";
+        let cancelButton = "";
+        // cancel button is broken - need to send authenticity token manually - is it safe?
+        if(currentUser == this.user.id) {
+            editButton = `<form class="button_to" method="get" action="/trainings/${this.id}/edit">
+                                <input class="back_to_trainings" value="Edit Training" type="submit"></form>`
+            cancelButton = `<form class="button_to" method="post" action="/trainings/${this.id}">
+                                <input class="back_to_trainings" value="Cancel Training" type="submit">
+                                <input name="_method" value="delete" type="hidden"></form>`
         }
-        renderIndexTraining() {
-            return Training.indexTemplate(this);
-        }
-        renderShowTraining() {
-            return Training.showTemplate(this);
-        }
-        formatShowButtons() {
-            var currentUserRoute = $("#current_user")[0].href
-            var currentUser = /\d+$/.exec(currentUserRoute);
-            let editButton = "";
-            let cancelButton = "";
-            // cancel button is broken - need to send authenticity token manually - is it safe?
-            if(currentUser == this.user.id) {
-                editButton = `<form class="button_to" method="get" action="/trainings/${this.id}/edit">
-                                    <input class="back_to_trainings" value="Edit Training" type="submit"></form>`
-                cancelButton = `<form class="button_to" method="post" action="/trainings/${this.id}">
-                                    <input class="back_to_trainings" value="Cancel Training" type="submit">
-                                    <input name="_method" value="delete" type="hidden"></form>`
-            }
-            return `${editButton}${cancelButton}`;
-        }
-      }
+        return `${editButton}${cancelButton}`;
+    }
+}
