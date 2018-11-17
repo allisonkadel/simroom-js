@@ -1,5 +1,5 @@
 <fieldset>
-<legend> <%= link_to training.name, training_path(training), :class => "show_link" %> </legend>
+<legend> <%= link_to training.name, training_path(training), :class => "show_link", "data-turbolinks" => "false" %> </legend>
 
 <%= render :partial => "attributes", :locals => {:training => training} %>
 

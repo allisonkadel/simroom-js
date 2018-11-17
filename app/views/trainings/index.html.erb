@@ -4,14 +4,14 @@
 <%= link_to "See Only Upcoming Trainings", '/trainings/upcoming' %>
 <%= link_to "See Only Past Trainings", '/trainings/past' %><br><br>
 <%= link_to "Back to Dashboard", user_path(current_user), :id => "current_user" %>
-<%= link_to "Schedule New Training", new_training_path, :class => "new_training" %>
+<%= link_to "Schedule New Training", new_training_path, :class => "new_training", "data-turbolinks" => "false" %>
 <div class= "training_form"></div>
 <%= render :partial => "list", :locals => {:trainings => @trainings} %>
 
 
 <script id="training-index-template" type="text/x-handlebars-template">
     <fieldset>
-        <legend> <a class="show_link" href="/trainings/{{id}}">{{name}}</a> </legend>
+        <legend> <a data-turbolinks="false" class="show_link" href="/trainings/{{id}}">{{name}}</a> </legend>
 
         <p> Description: {{description}} </p>
         <p> Room: {{simroom}} </p>
@@ -34,7 +34,7 @@
 
     </fieldset>
 
-    <a href="/trainings">Back To Trainings</a><br>
+    <a href="/trainings">Back To Trainings</a>
     <a href="/users/{{user.id}}" id="current_user">Back To Dashboard</a><br>
 
     <button class="next-training" data-id={{id}}>Next Training</button>
