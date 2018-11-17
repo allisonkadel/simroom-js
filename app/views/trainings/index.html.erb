@@ -9,7 +9,7 @@
 <%= render :partial => "list", :locals => {:trainings => @trainings} %>
 
 
-<script id="training-template" type="text/x-handlebars-template">
+<script id="training-index-template" type="text/x-handlebars-template">
     <fieldset>
         <legend> <a class="show_link" href="/trainings/{{id}}">{{name}}</a> </legend>
 
@@ -22,7 +22,7 @@
     </fieldset>
 </script>
 
-<script id="training-template" type="text/x-handlebars-template">
+<script id="training-show-template" type="text/x-handlebars-template">
     <fieldset>
         <legend><h3> {{name}} </h3></legend>
 
@@ -34,10 +34,13 @@
 
     </fieldset>
 
-<a href="/trainings">Back To Trainings</a><br>
-<a href="/users/{{user.id}}" id="current_user">Back To Dashboard</a><br>
+    <a href="/trainings">Back To Trainings</a><br>
+    <a href="/users/{{user.id}}" id="current_user">Back To Dashboard</a><br>
 
-<button class="next-training" data-id={{id}}>Next Training</button>
+    <button class="next-training" data-id={{id}}>Next Training</button>
 
-<%= admin_edit_button %>
-<%= admin_cancel_button %>
+    <!-- I DON'T KNOW HOW TO IMPLEMENT THIS LOGIC!!! -->
+    
+    <%= admin_edit_button %>
+    <%= admin_cancel_button %>
+</script>

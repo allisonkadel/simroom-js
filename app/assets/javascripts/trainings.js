@@ -53,7 +53,7 @@ const bindTrainingClickEvents = () => {
         e.preventDefault();
         $.get(`${this.href}`, null, null, 'json').success(function(training) {
             let newTraining = new Training(training)
-            let TrainingHtml = newTraining.formatShow()
+            let TrainingHtml = newTraining.renderShowTraining()
             $('body').html(TrainingHtml)
         });
     });
@@ -62,7 +62,7 @@ const bindTrainingClickEvents = () => {
         let id = $(this).attr('data-id')
         $.get(`/trainings/${id}/next`).success(function(training) {
             let nextTraining = new Training(training)
-            let TrainingHtml = nextTraining.formatShow()
+            let TrainingHtml = nextTraining.renderShowTraining()
 
             $('body').html(TrainingHtml)
         });
@@ -83,14 +83,19 @@ const bindTrainingClickEvents = () => {
 
     const buildTrainingTemplates = () => {
 
-        Training.templateSource = $('#training-template').html();
-        Training.template = Handlebars.compile(Training.templateSource)
+        Training.indexTemplateSource = $('#training-index-template').html();
+        Training.indexTemplate = Handlebars.compile(Training.indexTemplateSource)
+    
+        Training.showTemplateSource = $('#training-show-template').html();
+        Training.showTemplate = Handlebars.compile(Training.showTemplateSource)
     }
- 
- 
 
     Training.prototype.renderIndexTraining = function() {
-        return Training.template(this)
+        return Training.indexTemplate(this)
+    }
+
+    Training.prototype.renderShowTraining = function() {
+        return Training.showTemplate(this)
     }
 
     Training.prototype.formatShow = function() {
