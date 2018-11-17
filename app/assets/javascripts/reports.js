@@ -51,12 +51,11 @@ $(() => {
 });
 
 const bindClickEvents = () => {
+
     $("a.load_reports").on('click',function(e){
         e.preventDefault();
-
-        $.get(`${this.href}`, null, null, 'json')
+        $.get(this.href, null, null, 'json')
         .success(reports => {
-
             $(`div.reports-${reports[0].equipment.id}`).html(`<a href='equipment/${reports[0].equipment.id}/reports/new'>Create New Report</a>`)
             reports.forEach(report => {
                 let newReport = new Report(report)
@@ -64,34 +63,25 @@ const bindClickEvents = () => {
                 $(`div.reports-${reports[0].equipment.id}`).append(reportHtml);
             });
         });
-
-        $("")
     });
 }
 
-function Report(report) {
-    this.id = report.id
-    this.content = report.content
-    this.created_at = report.created_at
-    this.equipment = report.equipment
-}
-
-Report.prototype.formatHtml = function() {
-    let reportHtml = 
-        `<ul><fieldset>
-            <legend> ${this.created_at} </legend>
-            <p> ${this.content} </p>
-        </fieldset></ul>`
-    return reportHtml;
-}
-
-// class Report {
-//     debugger
-//     constructor(report) {
-//         this.id = report.id;
-//         this.content = report.content;
-//         this.created_at = report.created_at;
-//         this.equipment = report.equipment;
-//     }
-//   }
+class Report {
+    constructor(report) {
+        this.id = report.id;
+        this.content = report.content;
+        this.created_at = report.created_at;
+        this.equipment = report.equipment;
+    }
+    formatHtml() {
+        let reportHtml = 
+        `<ul>
+            <fieldset>
+                <legend> ${this.created_at} </legend>
+                <p> ${this.content} </p>
+            </fieldset>
+        </ul>`
+        return reportHtml;
+    }
+  }
 

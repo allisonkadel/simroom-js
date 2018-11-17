@@ -62,16 +62,6 @@ const buildTrainingTemplates = () => {
     Training.showTemplate = Handlebars.compile(Training.showTemplateSource)
 }
 
-    // function Training(training) {
-    //     this.id = training.id
-    //     this.name = training.name
-    //     this.description = training.description
-    //     this.simroom = training.simroom
-    //     this.date = training.date
-    //     this.equipment = training.equipment
-    //     this.user = training.user
-    // }
-
     class Training {
         constructor(training) {
             this.id = training.id
@@ -104,27 +94,3 @@ const buildTrainingTemplates = () => {
             return `${editButton}${cancelButton}`;
         }
       }
-
-    // Training.prototype.renderIndexTraining = function() {
-    //     return Training.indexTemplate(this)
-    // }
-
-    // Training.prototype.renderShowTraining = function() {
-    //     return Training.showTemplate(this)
-    // }
-
-    // Training.prototype.formatShowButtons = function() {
-    //     var currentUserRoute = $("#current_user")[0].href
-    //     var currentUser = /\d+$/.exec(currentUserRoute);
-    //     let editButton = "";
-    //     let cancelButton = "";
-    //     // cancel button is broken - need to send authenticity token manually - is it safe?
-    //     if(currentUser == this.user.id) {
-    //         editButton = `<form class="button_to" method="get" action="/trainings/${this.id}/edit">
-    //                             <input class="back_to_trainings" value="Edit Training" type="submit"></form>`
-    //         cancelButton = `<form class="button_to" method="post" action="/trainings/${this.id}">
-    //                             <input class="back_to_trainings" value="Cancel Training" type="submit">
-    //                             <input name="_method" value="delete" type="hidden"></form>`
-    //     }
-    //     return `${editButton}${cancelButton}`;
-    // }
