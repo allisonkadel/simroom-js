@@ -13,11 +13,31 @@
     <fieldset>
         <legend> <a class="show_link" href="/trainings/{{id}}">{{name}}</a> </legend>
 
-<p> Description: {{description}} </p>
-<p> Room: {{simroom}} </p>
-<p> Date: {{date}} </p>
-<p> Equipment: <a href="/equipment/{{equipment.id}}/reports">{{equipment.name}}</a> </p>
-<p> Created by: {{user.email}} </p>
+        <p> Description: {{description}} </p>
+        <p> Room: {{simroom}} </p>
+        <p> Date: {{date}} </p>
+        <p> Equipment: <a href="/equipment/{{equipment.id}}/reports">{{equipment.name}}</a> </p>
+        <p> Created by: {{user.email}} </p>
 
     </fieldset>
 </script>
+
+<script id="training-template" type="text/x-handlebars-template">
+    <fieldset>
+        <legend><h3> {{name}} </h3></legend>
+
+        <p> Description: {{description}} </p>
+        <p> Room: {{simroom}} </p>
+        <p> Date: {{date}} </p>
+        <p> Equipment: <a href="/equipment/{{equipment.id}}/reports">{{equipment.name}}</a> </p>
+        <p> Created by: {{user.email}} </p>
+
+    </fieldset>
+
+<a href="/trainings">Back To Trainings</a><br>
+<a href="/users/{{user.id}}" id="current_user">Back To Dashboard</a><br>
+
+<button class="next-training" data-id={{id}}>Next Training</button>
+
+<%= admin_edit_button %>
+<%= admin_cancel_button %>
