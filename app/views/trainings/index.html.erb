@@ -38,9 +38,8 @@
     <a href="/users/{{user.id}}" id="current_user">Back To Dashboard</a><br>
 
     <button class="next-training" data-id={{id}}>Next Training</button>
-
     <!-- WE NEED A WAY TO STORE THE EQUALITY OF CURRENT USER AND CURRENT TRAINING USER TO PASS TO THE TEMPALTE IF STATEMENT -->
-    {{#if user.id}}
+    {{#if }}
         <form class="button_to" method="get" action="/trainings/{{id}}/edit">
         <input class="back_to_trainings" value="Edit Training" type="submit"></form>`</p>
     {{/if}}
