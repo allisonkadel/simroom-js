@@ -1,10 +1,7 @@
 $(() => {
     bindTrainingClickEvents();
-});
-$(() => {
     buildTrainingTemplates();
 });
-
 
 const bindTrainingClickEvents = () => {    
 
