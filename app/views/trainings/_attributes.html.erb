@@ -8,7 +8,7 @@
 <%= "Date: #{training.date}" %>
 </p>
 <p>
-Equipment: <%= link_to training.equipment.name, equipment_reports_path(training.equipment) %>
+Equipment: <%= link_to training.equipment.name, equipment_reports_path(training.equipment), :class => "whatever" %>
 </p>
 <p>
 <%= "Created by: #{training.user.email}" %>
