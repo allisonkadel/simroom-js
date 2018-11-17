@@ -10,7 +10,6 @@ const bindTrainingClickEvents = () => {
 
     $(".new_training").on("click", function(e) {
         e.preventDefault();
-
         $.get(this.href).success(function(response) {
             $("div.training_form").html(response)
         });
@@ -23,26 +22,9 @@ const bindTrainingClickEvents = () => {
             url: this.action,
             data: $(this).serialize(),
             dataType: 'json',
-            // data: {
-            //     'authenticity_token': $("input[name='authenticity_token']").val(),
-            //     'training': {
-            //         'name': $("#training_name").val(),
-            //         'description': $("#training_description").val(),
-            //         'simroom': $("#training_simroom").val(),
-            //         'date': $("#training_date").val(),
-            //         'equipment_id': $("#training_equipment_id").val(),
-            //         'user_id': 25
-            //     } 
-            // },
-
-            // how do I get the id of the training we just created?
-            // we need this to insert a link on the training title
-
-            // Do I want to make a Training instance for this?
             success: function(training) {
                 let newTraining = new Training(training)
                 let indexTraining = newTraining.renderIndexTraining()
-
                 $('ul').prepend(indexTraining)
                 $('.back_to_trainings').remove()
             }
@@ -56,7 +38,6 @@ const bindTrainingClickEvents = () => {
             let TrainingHtml = newTraining.renderShowTraining()
             let buttonHtml = newTraining.formatShowButtons()
             $('body').html(TrainingHtml + buttonHtml)
-
         });
     });
 
@@ -72,84 +53,78 @@ const bindTrainingClickEvents = () => {
 
 }
 
+const buildTrainingTemplates = () => {
 
-    function Training(training) {
-        this.id = training.id
-        this.name = training.name
-        this.description = training.description
-        this.simroom = training.simroom
-        this.date = training.date
-        this.equipment = training.equipment
-        this.user = training.user
-    }
+    Training.indexTemplateSource = $('#training-index-template').html();
+    Training.indexTemplate = Handlebars.compile(Training.indexTemplateSource)
 
-    const buildTrainingTemplates = () => {
+    Training.showTemplateSource = $('#training-show-template').html();
+    Training.showTemplate = Handlebars.compile(Training.showTemplateSource)
+}
 
-        Training.indexTemplateSource = $('#training-index-template').html();
-        Training.indexTemplate = Handlebars.compile(Training.indexTemplateSource)
-    
-        Training.showTemplateSource = $('#training-show-template').html();
-        Training.showTemplate = Handlebars.compile(Training.showTemplateSource)
-    }
+    // function Training(training) {
+    //     this.id = training.id
+    //     this.name = training.name
+    //     this.description = training.description
+    //     this.simroom = training.simroom
+    //     this.date = training.date
+    //     this.equipment = training.equipment
+    //     this.user = training.user
+    // }
 
-    Training.prototype.renderIndexTraining = function() {
-        return Training.indexTemplate(this)
-    }
-
-    Training.prototype.renderShowTraining = function() {
-        return Training.showTemplate(this)
-    }
-
-    Training.prototype.formatShowButtons = function() {
-        var currentUserRoute = $("#current_user")[0].href
-        var currentUser = /\d+$/.exec(currentUserRoute);
-        let editButton = "";
-        let cancelButton = "";
-        // cancel button is broken - need to send authenticity token manually - is it safe?
-        if(currentUser == this.user.id) {
-            editButton = `<form class="button_to" method="get" action="/trainings/${this.id}/edit">
-                                <input class="back_to_trainings" value="Edit Training" type="submit"></form>`
-            cancelButton = `<form class="button_to" method="post" action="/trainings/${this.id}">
-                                <input class="back_to_trainings" value="Cancel Training" type="submit">
-                                <input name="_method" value="delete" type="hidden"></form>`
+    class Training {
+        constructor(training) {
+            this.id = training.id
+            this.name = training.name
+            this.description = training.description
+            this.simroom = training.simroom
+            this.date = training.date
+            this.equipment = training.equipment
+            this.user = training.user
         }
-        return `${editButton}${cancelButton}`;
+        renderIndexTraining() {
+            return Training.indexTemplate(this);
+        }
+        renderShowTraining() {
+            return Training.showTemplate(this);
+        }
+        formatShowButtons() {
+            var currentUserRoute = $("#current_user")[0].href
+            var currentUser = /\d+$/.exec(currentUserRoute);
+            let editButton = "";
+            let cancelButton = "";
+            // cancel button is broken - need to send authenticity token manually - is it safe?
+            if(currentUser == this.user.id) {
+                editButton = `<form class="button_to" method="get" action="/trainings/${this.id}/edit">
+                                    <input class="back_to_trainings" value="Edit Training" type="submit"></form>`
+                cancelButton = `<form class="button_to" method="post" action="/trainings/${this.id}">
+                                    <input class="back_to_trainings" value="Cancel Training" type="submit">
+                                    <input name="_method" value="delete" type="hidden"></form>`
+            }
+            return `${editButton}${cancelButton}`;
+        }
+      }
 
-        // let TrainingHtml = `
-        // <fieldset>
-        // <legend> ${this.name} </legend>
-        
-        // <p>
-        // Description: ${this.description}
-        // </p>
-        // <p>
-        // Room: ${this.simroom}
-        // </p>
-        // <p>
-        // Date: ${this.date}
-        // </p>
-        // <p>
-        // Equipment: <a href="/equipment/${this.equipment.id}/reports">${this.equipment.name}</a>
-        // </p>
-        // <p>
-        // Created by: ${this.user.email}
-        // </p>
-        
-        // </fieldset>
+    // Training.prototype.renderIndexTraining = function() {
+    //     return Training.indexTemplate(this)
+    // }
 
-        // <a href="/trainings">Back To Trainings</a><br>
-        // <a href="/users/${this.user.id}" id="current_user">Back To Dashboard</a><br>
+    // Training.prototype.renderShowTraining = function() {
+    //     return Training.showTemplate(this)
+    // }
 
-        // <button class="next-training" data-id=${this.id}>Next Training</button>
-
-    }
-
-
-    // $.ajax({
-    //     method: 'GET',
-    //     url: this.href,
-    // }).done(function(response) {
-    //     $("div.reports").html(response)
-    // }).error(function(response) {
-    //     alert("something went wrong :(");
-    // });
+    // Training.prototype.formatShowButtons = function() {
+    //     var currentUserRoute = $("#current_user")[0].href
+    //     var currentUser = /\d+$/.exec(currentUserRoute);
+    //     let editButton = "";
+    //     let cancelButton = "";
+    //     // cancel button is broken - need to send authenticity token manually - is it safe?
+    //     if(currentUser == this.user.id) {
+    //         editButton = `<form class="button_to" method="get" action="/trainings/${this.id}/edit">
+    //                             <input class="back_to_trainings" value="Edit Training" type="submit"></form>`
+    //         cancelButton = `<form class="button_to" method="post" action="/trainings/${this.id}">
+    //                             <input class="back_to_trainings" value="Cancel Training" type="submit">
+    //                             <input name="_method" value="delete" type="hidden"></form>`
+    //     }
+    //     return `${editButton}${cancelButton}`;
+    // }
