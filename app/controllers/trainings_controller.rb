@@ -21,7 +21,7 @@ class TrainingsController < ApplicationController
         end
     end
 
-    def show
+    def show # allows rails to serve either html or json response from same endpoint
         @training = Training.find(params[:id])
         respond_to do |f|
             f.html

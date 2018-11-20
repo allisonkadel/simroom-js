@@ -17,6 +17,11 @@ class EquipmentController < ApplicationController
         end
     end
 
+    def show
+        @equipment = Equipment.find(params[:id])
+        render :json => @equipment
+    end
+
     private
 
         def equipment_params
